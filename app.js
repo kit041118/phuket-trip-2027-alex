@@ -504,7 +504,7 @@ const TRIP_DATA = {
         { label: "官網", url: "https://prurestaurant.com/" }
       ],
       image: "assets/places/food-tasting.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "The Boathouse Wine & Grill",
@@ -525,7 +525,7 @@ const TRIP_DATA = {
         { label: "官網用餐頁", url: "https://boathouse-phuket.com/dining" }
       ],
       image: "assets/places/food-wine.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Mom Tri's Kitchen",
@@ -544,7 +544,7 @@ const TRIP_DATA = {
         { name: "Mom Tri's Kitchen", url: gmaps("Mom Tri's Kitchen Kata Noi Phuket") }
       ],
       image: "assets/places/food-cliff.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "On The Rock",
@@ -562,7 +562,7 @@ const TRIP_DATA = {
         { name: "On The Rock", url: gmaps("On The Rock Marina Phuket") }
       ],
       image: "assets/places/food-seafood.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Baan Rim Pa",
@@ -580,8 +580,8 @@ const TRIP_DATA = {
       places: [
         { name: "Baan Rim Pa", url: gmaps("Baan Rim Pa Phuket Kalim") }
       ],
-      image: "assets/places/food-cliff.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image: "assets/places/food-baanrimpa.jpg",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Acqua Restaurant",
@@ -600,7 +600,7 @@ const TRIP_DATA = {
         { name: "Acqua", url: gmaps("Acqua Restaurant Phuket Kalim") }
       ],
       image: "assets/places/food-italian.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Catch Beach Club",
@@ -618,7 +618,7 @@ const TRIP_DATA = {
         { name: "Catch Beach Club", url: gmaps("Catch Beach Club Bang Tao Phuket") }
       ],
       image: "assets/places/food-beachclub.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Siam Supper Club",
@@ -637,7 +637,7 @@ const TRIP_DATA = {
         { name: "Siam Supper Club", url: gmaps("Siam Supper Club Phuket Cherngtalay") }
       ],
       image: "assets/places/food-fine.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Black Ginger（The Slate）",
@@ -658,7 +658,7 @@ const TRIP_DATA = {
         { label: "官網", url: "https://www.blackginger.com/" }
       ],
       image: "assets/places/food-raft.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Blue Elephant Phuket",
@@ -679,7 +679,7 @@ const TRIP_DATA = {
         { label: "官網", url: "https://blueelephant.com/restaurant/phuket-restaurant/" }
       ],
       image: "assets/places/food-mansion.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Raya ระย้า",
@@ -697,7 +697,7 @@ const TRIP_DATA = {
         { name: "Raya", url: gmaps("Raya Restaurant Dibuk Road Phuket") }
       ],
       image: "assets/places/food-curry.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "One Chun",
@@ -714,7 +714,7 @@ const TRIP_DATA = {
         { name: "One Chun", url: gmaps("One Chun Cafe Restaurant Phuket") }
       ],
       image: "assets/places/food-oldtown.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Tu Kab Khao ตู้กับข้าว",
@@ -731,7 +731,7 @@ const TRIP_DATA = {
         { name: "Tu Kab Khao", url: gmaps("Tu Kab Khao Restaurant Phuket") }
       ],
       image: "assets/places/food-crab.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Kopitiam by Wilai",
@@ -748,7 +748,7 @@ const TRIP_DATA = {
         { name: "Kopitiam by Wilai", url: gmaps("Kopitiam by Wilai Phuket") }
       ],
       image: "assets/places/food-breakfast.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Kan Eang @ Pier",
@@ -766,7 +766,7 @@ const TRIP_DATA = {
         { name: "Kan Eang @ Pier", url: gmaps("Kan Eang at Pier Chalong") }
       ],
       image: "assets/places/food-grill.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Suay Restaurant Cherngtalay",
@@ -785,7 +785,7 @@ const TRIP_DATA = {
         { name: "Suay Cherngtalay", url: gmaps("Suay Restaurant Cherngtalay Phuket") }
       ],
       image: "assets/places/food-thai.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Laem Hin Seafood",
@@ -802,8 +802,8 @@ const TRIP_DATA = {
       places: [
         { name: "Laem Hin Seafood", url: gmaps("Laem Hin Seafood Phuket") }
       ],
-      image: "assets/places/food-seafood.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image: "assets/places/food-laemhin.jpg",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Jampa（Tri Vananda）",
@@ -822,7 +822,7 @@ const TRIP_DATA = {
         { name: "Jampa", url: gmaps("Jampa Restaurant Tri Vananda Phuket") }
       ],
       image: "assets/places/food-farm.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Thai Library（Trisara）",
@@ -840,26 +840,26 @@ const TRIP_DATA = {
       places: [
         { name: "Thai Library", url: gmaps("Thai Library Trisara Phuket") }
       ],
-      image: "assets/places/food-fine.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image: "assets/places/food-thailibrary.jpg",
+      image_credit: "Google／店家或景點實景",
   },
     {
-      name: "Dibba Restaurant",
-      region: "卡塔",
-      category: "泰菜",
-      cuisine: "泰式",
-      rating: "4.3",
-      price: "約 400–900 銖",
+      name: "The Lazy Coconut（Twinpalms）",
+      region: "邦濤／Cherngtalay",
+      category: "高級／國際菜",
+      cuisine: "國際菜・海景",
+      rating: "4.5",
+      price: "約 1,200–3,000 銖",
       hours: "午餐至晚間",
       hours_uncertain: true,
-      note: "卡塔一帶評價不錯的泰菜與海鮮，氣氛比街邊檔精緻一點。適合不想再開車、又想換口味的晚上。",
-      lat: 7.8178,
-      lng: 98.3005,
+      note: "Twinpalms 旗下海景餐廳（泳池與沙灘邊），日落氣氛佳，適合慶祝或輕鬆高級晚餐。",
+      lat: 7.9845,
+      lng: 98.2798,
       places: [
-        { name: "Dibba", url: gmaps("Dibba Restaurant Kata Phuket") }
+        { name: "The Lazy Coconut", url: gmaps("The Lazy Coconut Twinpalms Phuket") }
       ],
       image: "assets/places/food-garden.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   }
   ],
   spas: [
@@ -880,7 +880,7 @@ const TRIP_DATA = {
         { name: "Trisara Spa", url: gmaps("Trisara Spa Phuket") }
       ],
       image: "assets/places/spa-luxury.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Tew Son Spa（Katathani）",
@@ -899,7 +899,7 @@ const TRIP_DATA = {
         { label: "官網", url: "https://www.katathani.com/facilities/spa/" }
       ],
       image: "assets/places/spa-resort.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Anantara Spa Phuket",
@@ -917,7 +917,7 @@ const TRIP_DATA = {
         { name: "Anantara Spa", url: gmaps("Anantara Spa Mai Khao Phuket") }
       ],
       image: "assets/places/spa-ocean.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Banyan Tree Spa Phuket",
@@ -935,10 +935,10 @@ const TRIP_DATA = {
         { name: "Banyan Tree Spa", url: gmaps("Banyan Tree Spa Phuket Laguna") }
       ],
       image: "assets/places/spa-pool.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
-      name: "Dewa Spa（The Slate）",
+      name: "Coqoon Spa（The Slate｜原 Dewa）",
       region: "邁楊",
       category: "度假村",
       type_tag: "度假村",
@@ -953,7 +953,7 @@ const TRIP_DATA = {
         { name: "Dewa Spa", url: gmaps("Dewa Spa The Slate Phuket") }
       ],
       image: "assets/places/spa-stone.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Amanpuri Spa",
@@ -971,7 +971,7 @@ const TRIP_DATA = {
         { name: "Amanpuri Spa", url: gmaps("Amanpuri Spa Phuket") }
       ],
       image: "assets/places/spa-villa.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Andara Spa",
@@ -988,8 +988,8 @@ const TRIP_DATA = {
       places: [
         { name: "Andara Spa", url: gmaps("Andara Spa Phuket Kamala") }
       ],
-      image: "assets/places/spa-ocean.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image: "assets/places/spa-andara.jpg",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Keemala Spa",
@@ -1007,7 +1007,7 @@ const TRIP_DATA = {
         { name: "Keemala Spa", url: gmaps("Keemala Spa Phuket") }
       ],
       image: "assets/places/spa-jungle.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Oasis Sky Breeze Spa",
@@ -1026,7 +1026,7 @@ const TRIP_DATA = {
         { label: "Oasis 布吉", url: "https://oasisspa.net/en/destination/phuket/" }
       ],
       image: "assets/places/spa-massage.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Let's Relax Spa・The SIS Kata",
@@ -1045,7 +1045,7 @@ const TRIP_DATA = {
         { label: "分店頁", url: "https://letsrelaxspa.com/branches/phuket-the-sis-kata/" }
       ],
       image: "assets/places/spa-thai.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Ayara Spa",
@@ -1063,7 +1063,7 @@ const TRIP_DATA = {
         { name: "Ayara Spa", url: gmaps("Ayara Spa Kata Phuket") }
       ],
       image: "assets/places/spa-oil.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "JW Marriott Spa Mai Khao",
@@ -1081,7 +1081,7 @@ const TRIP_DATA = {
         { name: "JW Marriott Spa", url: gmaps("JW Marriott Spa Mai Khao Phuket") }
       ],
       image: "assets/places/spa-garden.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Six Senses Spa Yao Noi（離島）",
@@ -1098,8 +1098,8 @@ const TRIP_DATA = {
       places: [
         { name: "Six Senses Yao Noi", url: gmaps("Six Senses Spa Yao Noi") }
       ],
-      image: "assets/places/spa-luxury.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image: "assets/places/spa-sixsenses.jpg",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "The Spa at Katathani（延伸）",
@@ -1115,7 +1115,7 @@ const TRIP_DATA = {
         { name: "Katathani Spa", url: gmaps("Katathani Phuket Beach Resort Spa") }
       ],
       image: "assets/places/spa-candle.jpg",
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   }
   ],
   beaches: [
@@ -1132,7 +1132,7 @@ const TRIP_DATA = {
       places: [
         { name: "卡塔諾伊", url: gmaps("Kata Noi Beach") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "卡塔海灘 Kata",
@@ -1147,7 +1147,7 @@ const TRIP_DATA = {
       places: [
         { name: "卡塔海灘", url: gmaps("Kata Beach Phuket") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "卡隆海灘 Karon",
@@ -1162,7 +1162,7 @@ const TRIP_DATA = {
       places: [
         { name: "卡隆海灘", url: gmaps("Karon Beach") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "拉威海角 Promthep Cape",
@@ -1177,7 +1177,7 @@ const TRIP_DATA = {
       places: [
         { name: "拉威海角", url: gmaps("Promthep Cape") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "奈漢海灘 Nai Harn",
@@ -1192,7 +1192,7 @@ const TRIP_DATA = {
       places: [
         { name: "奈漢海灘", url: gmaps("Nai Harn Beach") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "亞努伊 Ya Nui",
@@ -1207,7 +1207,7 @@ const TRIP_DATA = {
       places: [
         { name: "亞努伊", url: gmaps("Ya Nui Beach Phuket") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "自由沙灘 Freedom Beach",
@@ -1223,7 +1223,7 @@ const TRIP_DATA = {
       places: [
         { name: "自由沙灘", url: gmaps("Freedom Beach Phuket") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "芭東海灘 Patong",
@@ -1238,7 +1238,7 @@ const TRIP_DATA = {
       places: [
         { name: "芭東海灘", url: gmaps("Patong Beach") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "蘇林海灘 Surin",
@@ -1254,7 +1254,7 @@ const TRIP_DATA = {
       places: [
         { name: "蘇林海灘", url: gmaps("Surin Beach Phuket") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "邦濤海灘 Bang Tao",
@@ -1270,7 +1270,7 @@ const TRIP_DATA = {
       places: [
         { name: "邦濤海灘", url: gmaps("Bang Tao Beach Phuket") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "卡瑪拉海灘 Kamala",
@@ -1285,7 +1285,7 @@ const TRIP_DATA = {
       places: [
         { name: "卡瑪拉海灘", url: gmaps("Kamala Beach Phuket") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "拉揚海灘 Layan",
@@ -1300,7 +1300,7 @@ const TRIP_DATA = {
       places: [
         { name: "拉揚海灘", url: gmaps("Layan Beach Phuket") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "邁考海灘 Mai Khao",
@@ -1315,7 +1315,7 @@ const TRIP_DATA = {
       places: [
         { name: "邁考海灘", url: gmaps("Mai Khao Beach Phuket") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "邁楊海灘 Nai Yang",
@@ -1330,7 +1330,7 @@ const TRIP_DATA = {
       places: [
         { name: "邁楊海灘", url: gmaps("Nai Yang Beach Phuket") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Tri Trang 海灘",
@@ -1345,7 +1345,7 @@ const TRIP_DATA = {
       places: [
         { name: "Tri", url: gmaps("Tri Trang Beach Patong") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   }
   ],
   markets: [
@@ -1367,7 +1367,7 @@ const TRIP_DATA = {
       places: [
         { name: "那卡週末市集", url: gmaps("Naka Weekend Market Phuket") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "塔廊路週日行人街 Lard Yai",
@@ -1383,7 +1383,7 @@ const TRIP_DATA = {
       places: [
         { name: "塔廊路週日行人街", url: gmaps("Thalang Road Sunday Walking Street Phuket Old Town") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "舊城日間步行",
@@ -1398,7 +1398,7 @@ const TRIP_DATA = {
       places: [
         { name: "舊城日間步行", url: gmaps("Soi Romanee Phuket") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Chillva Market",
@@ -1415,7 +1415,7 @@ const TRIP_DATA = {
       places: [
         { name: "Chillva", url: gmaps("Chillva Market Phuket") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Phuket Weekend Market（Indy）",
@@ -1431,7 +1431,7 @@ const TRIP_DATA = {
       places: [
         { name: "Phuket", url: gmaps("Phuket Weekend Market Indy") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "邦濤夜市 Bangtao Night Market",
@@ -1447,7 +1447,7 @@ const TRIP_DATA = {
       places: [
         { name: "邦濤夜市", url: gmaps("Bangtao Night Market Phuket") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "卡塔夜市 Kata Night Market",
@@ -1463,7 +1463,7 @@ const TRIP_DATA = {
       places: [
         { name: "卡塔夜市", url: gmaps("Kata Night Market Phuket") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "拉威海鮮市場 Rawai",
@@ -1479,7 +1479,7 @@ const TRIP_DATA = {
       places: [
         { name: "拉威海鮮市場", url: gmaps("Rawai Seafood Market Phuket") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Banzaan 生鮮市場",
@@ -1495,7 +1495,7 @@ const TRIP_DATA = {
       places: [
         { name: "Banzaan", url: gmaps("Banzaan Fresh Market Patong") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Malin Plaza 夜市",
@@ -1511,7 +1511,7 @@ const TRIP_DATA = {
       places: [
         { name: "Malin", url: gmaps("Malin Plaza Night Market Patong") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Boat Avenue Night Market",
@@ -1527,7 +1527,7 @@ const TRIP_DATA = {
       places: [
         { name: "Boat", url: gmaps("Boat Avenue Phuket Night Market") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "Laguna Night Market",
@@ -1543,7 +1543,7 @@ const TRIP_DATA = {
       places: [
         { name: "Laguna", url: gmaps("Laguna Phuket Night Market") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "舊城週末市集（參考）",
@@ -1559,7 +1559,7 @@ const TRIP_DATA = {
       places: [
         { name: "舊城週末市集（參考）", url: gmaps("Phuket Old Town weekend market") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   },
     {
       name: "泰國華博物館（日間）",
@@ -1575,7 +1575,7 @@ const TRIP_DATA = {
       places: [
         { name: "泰國華博物館（日間）", url: gmaps("Phuket Thai Hua Museum") }
       ],
-      image_credit: "Unsplash（氣氛參考）",
+      image_credit: "Google／店家或景點實景",
   }
   ],
 };
