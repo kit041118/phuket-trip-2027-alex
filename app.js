@@ -6,7 +6,7 @@ function gmaps(query) {
 const TRIP_DATA = {
   trip: {
     title: "布吉之旅",
-    subtitle: "香港 ⇄ 布吉・卡塔諾伊三晚，舊城兩晚",
+    subtitle: "香港 ⇄ 布吉・卡塔諾伊三晚，芭東兩晚",
     start: "2027-05-19",
     end: "2027-05-24",
     nights: 5,
@@ -36,9 +36,9 @@ const TRIP_DATA = {
     { date: "2027-05-19", region: "卡塔諾伊", lat: 7.808, lon: 98.299 },
     { date: "2027-05-20", region: "卡塔諾伊", lat: 7.808, lon: 98.299 },
     { date: "2027-05-21", region: "卡塔諾伊", lat: 7.808, lon: 98.299 },
-    { date: "2027-05-22", region: "卡塔至舊城", lat: 7.85, lon: 98.34 },
-    { date: "2027-05-23", region: "普吉舊城", lat: 7.884, lon: 98.388 },
-    { date: "2027-05-24", region: "舊城・機場", lat: 7.95, lon: 98.35 },
+    { date: "2027-05-22", region: "卡塔至芭東", lat: 7.85, lon: 98.30 },
+    { date: "2027-05-23", region: "芭東", lat: 7.896, lon: 98.296 },
+    { date: "2027-05-24", region: "芭東・機場", lat: 7.98, lon: 98.30 },
   ],
   areas: [
     {
@@ -46,8 +46,8 @@ const TRIP_DATA = {
       text: "5 月 19 日至 22 日住 Kata Noi。小海灣比芭東安靜，沙灘就在酒店外；浪大就改用泳池。卡塔、卡隆與拉威海角都在十多分鐘車程內。",
     },
     {
-      title: "後兩晚・普吉舊城",
-      text: "5 月 22 日午後退房，改住攀牙路的老屋酒店。週六晚是那卡週末市集，週日晚是塔廊路行人街，走路就到。週一去機場也比從南端出海灘近。",
+      title: "後兩晚・芭東 Hotel Indigo",
+      text: "5 月 22 日午後退房，改住芭東英迪格。步行約可到芭東海灘，有泳池；晚上方便去 Simon Cabaret。舊城與市集改為週末白天可選行程，用 Grab 來回即可。",
     },
     {
       title: "這趟不排的事",
@@ -65,7 +65,8 @@ const TRIP_DATA = {
   overview: [
     { name: "布吉國際機場", lat: 8.105882, lng: 98.305702, places: [{ name: "布吉國際機場", url: gmaps("Phuket International Airport") }] },
     { name: "卡塔坦尼海灘度假村", lat: 7.807724, lng: 98.29932, places: [{ name: "Katathani", url: gmaps("Katathani Phuket Beach Resort") }] },
-    { name: "The Memory at On On", lat: 7.883809, lng: 98.388544, places: [{ name: "The Memory", url: gmaps("The Memory at On On Hotel Phuket") }] },
+    { name: "Hotel Indigo Phuket Patong", lat: 7.8993, lng: 98.2999, places: [{ name: "Hotel Indigo", url: gmaps("Hotel Indigo Phuket Patong") }] },
+    { name: "Simon Cabaret", lat: 7.8788, lng: 98.2921, places: [{ name: "Simon Cabaret", url: gmaps("Simon Cabaret Phuket") }] },
     { name: "拉威海角", lat: 7.761892, lng: 98.305358, places: [{ name: "拉威海角", url: gmaps("Promthep Cape") }] },
     { name: "普吉大佛", lat: 7.827521, lng: 98.312445, places: [{ name: "大佛", url: gmaps("Big Buddha Phuket") }] },
     { name: "那卡週末市集", lat: 7.880533, lng: 98.366326, places: [{ name: "那卡市集", url: gmaps("Naka Weekend Market Phuket") }] },
@@ -272,132 +273,113 @@ const TRIP_DATA = {
     {
       date: "2027-05-22",
       weekday: "六",
-      region: "舊城・那卡",
-      summary: "上午最後一次下海，中午換酒店。大佛只停一會兒，傍晚留給舊城和週末市集。",
+      region: "卡塔・芭東",
+      summary: "上午最後一次下海，中午換住芭東英迪格；傍晚去 Simon Cabaret。舊城與市集改為翌日可選。",
       items: [
         {
           time: "0800-1100",
           cat: "beach",
           title: "早餐，最後一泳，退房",
-          notes: [
-            "建議退房離開：約 11:00\n行李在酒店集中好。泳裝放在手提袋，下午不會再回沙灘。",
-          ],
+          notes: ["建議退房離開：約 11:00\n行李在酒店集中好。泳裝可放手提袋；下午入住芭東後仍可靠海與泳池。"],
           places: [{ name: "Katathani", url: gmaps("Katathani Phuket Beach Resort") }],
         },
         {
           time: "1100-1230",
           cat: "food",
           title: "卡塔午餐",
-          notes: ["吃完再上路。不要空肚子去大佛。"],
+          notes: ["吃完再上路。不要空肚子換酒店或去大佛。"],
           places: [{ name: "The Boathouse", url: gmaps("The Boathouse Phuket Kata Beach") }],
         },
         {
           time: "1230-1400",
           cat: "sight",
-          title: "順路：普吉大佛",
-          notes: [
-            "出發：卡塔約 12:30\n到達：大佛約 12:50\n車程：約 15–20 分\n車費：Grab 約 200–350 銖\n建議離開：約 14:00，參觀 30–40 分夠了\n免費入內（可隨喜）。肩膀與膝蓋要遮好。若午後大雨或隊伍很長，直接去舊城，不必勉強。",
-          ],
+          title: "順路：普吉大佛（可選）",
+          notes: ["出發：卡塔約 12:30\n到達：大佛約 12:50\n車程：約 15–20 分\n車費：Grab 約 200–350 銖\n建議離開：約 13:40–14:00，參觀 30–40 分夠了\n免費入內（可隨喜）。肩膀與膝蓋要遮好。若午後大雨、隊伍很長，或想直接換酒店休息，可略過，由卡塔直奔芭東。"],
           places: [{ name: "普吉大佛", url: gmaps("Big Buddha Phuket") }],
         },
         {
           time: "1400-1530",
           cat: "hotel",
-          title: "入住 The Memory at On On",
-          notes: [
-            "出發：大佛\n到達：普吉舊城攀牙路 19 號\n車程：約 20–30 分\n車費：約 250–400 銖\n1927 年中葡式老屋改建。放下行李，不必立刻再出門趕場。",
-          ],
-          places: [{ name: "The Memory at On On", url: gmaps("The Memory at On On Hotel Phuket") }],
-          links: ["https://www.thememoryhotel.com/en/"],
-        },
-        {
-          time: "1530-1630",
-          cat: "market",
-          title: "舊城散步",
-          notes: [
-            "攀牙路、塔廊路、羅曼尼巷、迪布路都在步行範圍。Kopitiam by Wilai 星期六開到約 20:00，可先坐下喝一杯；星期日休息，不要留到明天。\n泰國華博物館若已關門，看街屋外觀即可。",
-          ],
-          places: [
-            { name: "羅曼尼巷", url: gmaps("Soi Romanee Phuket Old Town") },
-            { name: "Kopitiam by Wilai", url: gmaps("Kopitiam by Wilai Phuket") },
-            { name: "泰國華博物館", url: gmaps("Phuket Thai Hua Museum") },
+          title: "入住 Hotel Indigo Phuket Patong（芭東英迪格）",
+          notes: ["出發：大佛（或卡塔直達）\n到達：Rat U Thit 200 Pee 路 124 號，芭東\n車程：自大佛約 25–40 分；自卡塔約 20–35 分\n車費：Grab 約 250–450 銖（以當日為準）\nIHG 精品酒店，有泳池，步行約可到芭東海灘。放下行李，先休息或下泳池，不必立刻再出門趕場。\n電話 +66 76 609 999。"],
+          places: [{ name: "Hotel Indigo Phuket Patong", url: gmaps("Hotel Indigo Phuket Patong") }],
+          links: [
+            "https://phuketpatong.hotelindigo.com/",
+            "https://www.expedia.com/Phuket-Hotels-Hotel-Indigo-Phuket-Patong.h29752811.Hotel-Information?chkin=2027-05-22&chkout=2027-05-24",
           ],
         },
         {
-          time: "1630-1930",
-          cat: "market",
-          title: "那卡週末市集當晚餐",
-          notes: [
-            "出發：舊城約 16:30\n到達：維集，Wirat Hong Yok 路\n車程：約 10–15 分\n車費：Grab 約 120–200 銖\n星期六、日約 16:00 開，有資料寫至 22:00，亦有寫至 23:00。逛熟食、水果和日用品，約兩小時足夠，不必走完。\n若想坐下吃：回舊城可到 Raya（約至 22:00，週末宜先致電）或 Tu Kab Khao（攀牙路，約至 20:30，離酒店很近）。",
-          ],
+          time: "1530-1730",
+          cat: "buffer",
+          title: "泳池／芭東海灘輕鬆",
+          notes: ["這段留給休息。五月西岸常有大浪，下水只看海灘旗；紅旗就改用酒店泳池。\n舊城與那卡市集今晚不趕，改到明天白天可選。"],
           places: [
-            { name: "那卡週末市集", url: gmaps("Naka Weekend Market Phuket") },
-            { name: "Raya", url: gmaps("Raya Restaurant Phuket Dibuk Road") },
-            { name: "Tu Kab Khao", url: gmaps("Tu Kab Khao Phuket") },
+            { name: "Hotel Indigo", url: gmaps("Hotel Indigo Phuket Patong") },
+            { name: "芭東海灘", url: gmaps("Patong Beach Phuket") },
           ],
-          links: ["https://www.phuketnakamarket.com/"],
+        },
+        {
+          time: "1730-1845",
+          cat: "food",
+          title: "提早晚餐（看秀前）",
+          notes: ["建議 17:30–18:30 在酒店附近或芭東用餐，留充足時間去劇場。\n不要塞飽到趕不及；演出約一小時，看完若仍餓可再吃宵夜。"],
+          places: [{ name: "Hotel Indigo", url: gmaps("Hotel Indigo Phuket Patong") }],
+        },
+        {
+          time: "1845-2100",
+          cat: "show",
+          title: "Simon Cabaret 人妖秀（建議 19:30 場）",
+          notes: ["場址：8 Sirirat Road, Patong（西瑞叻路）\n建議場次：19:30（另有約 18:00、21:00，出發前再核對）\n建議抵達：18:45–19:00，留座位與進場時間\n票價參考：約 800 銖起（兒童較低，以官網／當日售票為準）\n交通：由 Hotel Indigo Grab 約 10–20 分，很近；亦可請酒店叫車\n預約：旺季建議官網或可信票務先訂，現場亦常有票但可能較後排\n拍照：進場前後可拍外觀與舞台空場；演出進行中通常禁止攝影／錄影，以場內指示為準\n表演約一小時。結束後回酒店，早點休息。"],
+          places: [{ name: "Simon Cabaret", url: gmaps("Simon Cabaret Phuket") }],
+          links: ["https://www.simoncabaretphuket.com/"],
         },
       ],
     },
     {
       date: "2027-05-23",
       weekday: "日",
-      region: "普吉舊城",
-      summary: "慢日。午餐吃一頓本地菜，下午休息，傍晚塔廊路行人街。早睡，因為明天 11:15 的飛機。",
+      region: "芭東",
+      summary: "慢日。上午海邊或泳池；白天可選 Grab 去舊城與市集。晚上早睡，明天從芭東趕飛機要比舊城再早出門。",
       items: [
         {
           time: "0800-1100",
-          cat: "buffer",
-          title: "睡到自然醒",
-          notes: [
-            "Kopitiam by Wilai 星期日休息。早餐用酒店，或十時後到 One Chun。\n不要把奈漢或自由沙灘排進上午。",
-          ],
+          cat: "beach",
+          title: "睡到自然醒，酒店早餐，芭東沙灘或泳池",
+          notes: ["預設留在芭東。浪況與紅旗以當日海灘旗為準；不下水就泳池與咖啡。\n不要把舊城硬塞進上午。"],
           places: [
-            { name: "The Memory at On On", url: gmaps("The Memory at On On Hotel Phuket") },
-            { name: "One Chun", url: gmaps("One Chun Cafe Restaurant Phuket") },
+            { name: "Hotel Indigo", url: gmaps("Hotel Indigo Phuket Patong") },
+            { name: "芭東海灘", url: gmaps("Patong Beach Phuket") },
           ],
         },
         {
-          time: "1130-1330",
-          cat: "food",
-          title: "午餐：Raya 或 One Chun",
-          notes: [
-            "建議抵達：約 11:30，比晚餐容易有位\nRaya 在迪布路老屋，普吉與南泰家常菜，蟹肉黃咖哩麵是招牌。約 10:30–22:00，週末晚餐宜先致電 076 218 155。\nOne Chun 就在附近，約 10:00–22:00（星期二或較早收）。",
-          ],
+          time: "1100-1600",
+          cat: "buffer",
+          title: "可選：Grab 去舊城散步／那卡市集",
+          notes: ["非必去。想逛中葡街屋再出發。\n出發：芭東約 11:00–12:00\n到達：舊城約 11:40–12:50\n車程：約 30–45 分\n車費：Grab 約 350–550 銖（以當日為準）\n可選路線：羅曼尼巷、塔廊路、午餐 Raya 或 One Chun；星期日下午／傍晚可順看塔廊路行人街。那卡週末市集星期六、日約 16:00 起，若體力夠可再去一趟，約兩小時足夠。\n建議最遲 18:30–19:00 起程回芭東。不想跑就不去，整天留在海邊也很好。"],
           places: [
+            { name: "羅曼尼巷", url: gmaps("Soi Romanee Phuket Old Town") },
             { name: "Raya", url: gmaps("Raya Restaurant Dibuk Road Phuket") },
-            { name: "One Chun", url: gmaps("One Chun Cafe Restaurant Phuket") },
+            { name: "那卡週末市集", url: gmaps("Naka Weekend Market Phuket") },
+            { name: "塔廊路行人街", url: gmaps("Thalang Road Sunday Walking Street Phuket") },
           ],
+          links: ["https://www.phuketnakamarket.com/"],
         },
         {
-          time: "1330-1600",
-          cat: "buffer",
-          title: "回酒店休息",
-          notes: [
-            "預設不再出門。明天要早起。\n若海況好又仍想見海：Grab 去奈漢或亞努伊，單程約 30–40 分，最遲 15:30 起程回舊城。浪大或下雨就取消。",
-          ],
+          time: "1600-1900",
+          cat: "beach",
+          title: "回芭東：海灘、泳池或輕鬆晚餐",
+          notes: ["若沒去舊城，這段繼續海邊。若去過舊城，回酒店沖涼後在附近簡單吃。\nBangla 夜店街可路過看一眼，不必久留。"],
           places: [
-            { name: "奈漢海灘", url: gmaps("Nai Harn Beach") },
-            { name: "亞努伊海灘", url: gmaps("Ya Nui Beach Phuket") },
+            { name: "Hotel Indigo", url: gmaps("Hotel Indigo Phuket Patong") },
+            { name: "芭東海灘", url: gmaps("Patong Beach Phuket") },
           ],
         },
         {
-          time: "1600-1930",
-          cat: "market",
-          title: "塔廊路週日行人街",
-          notes: [
-            "建議抵達：16:00 後，行人街約開放至 22:00（時段請再核對）\n由酒店步行數分鐘。小吃、手工與街屋都在這條路上。\n建議離開：約 19:30。不要熬到收攤。晚餐就在街上解決。",
-          ],
-          places: [{ name: "塔廊路行人街", url: gmaps("Thalang Road Sunday Walking Street Phuket") }],
-        },
-        {
-          time: "1930-2100",
+          time: "1900-2100",
           cat: "note",
           title: "回房，整理行李，約明天的車",
-          notes: [
-            "請酒店代叫週一 07:15 的車，或前一晚在 Grab 看得到司機再下單。\n護照、充電器、轉接頭放進手提行李。泳裝可以收起來了。",
-          ],
-          places: [{ name: "The Memory at On On", url: gmaps("The Memory at On On Hotel Phuket") }],
+          notes: ["明天 UO725 11:15 起飛。芭東到機場通常比舊城更長，約 45–75 分視交通，建議比住舊城時再早出門。\n請酒店代叫週一約 06:45 的車，或前一晚在 Grab 看得到司機再下單。雨天或想更穩，改 06:30。\n護照、充電器、轉接頭放進手提行李。"],
+          places: [{ name: "Hotel Indigo Phuket Patong", url: gmaps("Hotel Indigo Phuket Patong") }],
         },
       ],
     },
@@ -405,36 +387,30 @@ const TRIP_DATA = {
       date: "2027-05-24",
       weekday: "一",
       region: "機場・香港",
-      summary: "早上只有一件事：去機場趕 UO725。11:15 起飛，15:55 到香港 T1。",
+      summary: "從 Hotel Indigo Patong 出發趕 UO725。芭東到機場車程通常比舊城長，請提早出門。11:15 起飛，15:55 到香港 T1。",
       items: [
         {
-          time: "0630-0715",
+          time: "0600-0645",
           cat: "food",
           title: "簡單早餐，退房",
-          notes: [
-            "若酒店早餐未開，用週日晚上買的面包或水果。\n建議離開酒店：07:15。雨天或想更穩，改 07:00。",
-          ],
-          places: [{ name: "The Memory at On On", url: gmaps("The Memory at On On Hotel Phuket") }],
+          notes: ["若酒店早餐未開，用前一晚備好的面包或水果。\n建議離開酒店：06:45。雨天、週一塞車或想更穩，改 06:30。"],
+          places: [{ name: "Hotel Indigo Phuket Patong", url: gmaps("Hotel Indigo Phuket Patong") }],
         },
         {
-          time: "0715-0845",
+          time: "0645-0830",
           cat: "transport",
-          title: "舊城 → 布吉國際機場",
-          notes: [
-            "出發：攀牙路酒店 07:15\n到達：國際線航廈，目標約 08:15–08:45\n車程：約 40–70 分（Thepkrasattri 路週一早上可能慢）\n上車地點：酒店門口\n車費：Grab 或酒店叫車約 600–900 銖，以當日為準\n這就是把最後兩晚放在舊城的原因。若仍住卡塔諾伊，同一班飛機要再早約一小時出門。",
-          ],
+          title: "芭東 → 布吉國際機場",
+          notes: ["出發：Hotel Indigo Patong 約 06:45\n到達：國際線航廈，目標約 08:00–08:30\n車程：約 45–75 分（週一早上 Thepkrasattri／繞島幹道可能慢）\n上車地點：酒店門口\n車費：Grab 或酒店叫車約 700–1,100 銖，以當日為準\n比住舊城時再預留約 15–30 分緩衝。航班不變：仍為 UO725。"],
           places: [
-            { name: "The Memory at On On", url: gmaps("The Memory at On On Hotel Phuket") },
+            { name: "Hotel Indigo Phuket Patong", url: gmaps("Hotel Indigo Phuket Patong") },
             { name: "布吉國際機場", url: gmaps("Phuket International Airport") },
           ],
         },
         {
-          time: "0845-1115",
+          time: "0830-1115",
           cat: "flight",
           title: "辦登機，UO725 等候起飛",
-          notes: [
-            "建議抵達機場：08:30 前後，大約起飛前兩小時半。\nUO725 11:15 自布吉國際線航廈起飛。請預先在香港快運 App 辦登機。櫃檯截止以當日規定為準。\n安檢後在航廈用午餐即可。",
-          ],
+          notes: ["建議抵達機場：08:15 前後，大約起飛前約三小時較穩（含塞車緩衝）。\nUO725 11:15 自布吉國際線航廈起飛。請預先在香港快運 App 辦登機。櫃檯截止以當日規定為準。\n安檢後在航廈用午餐即可。"],
           places: [{ name: "布吉國際機場", url: gmaps("Phuket International Airport") }],
           links: ["https://www.hkexpress.com/"],
         },
@@ -442,9 +418,7 @@ const TRIP_DATA = {
           time: "1115-1555",
           cat: "flight",
           title: "UO725 布吉 → 香港 T1",
-          notes: [
-            "出發：布吉國際機場 11:15\n到達：香港國際機場客運大樓 1，15:55\n車程：約 3 小時 40 分\n車費：機票已含（隨心飛）",
-          ],
+          notes: ["出發：布吉國際機場 11:15\n到達：香港國際機場客運大樓 1，15:55\n車程：約 3 小時 40 分\n車費：機票已含（隨心飛）"],
           places: [
             { name: "布吉國際機場", url: gmaps("Phuket International Airport") },
             { name: "香港機場 T1", url: gmaps("Hong Kong International Airport Terminal 1") },
@@ -452,6 +426,7 @@ const TRIP_DATA = {
         },
       ],
     },
+
   ],
   hotels: [
     {
@@ -471,16 +446,19 @@ const TRIP_DATA = {
       ],
     },
     {
-      name: "The Memory at On On Hotel",
-      region: "普吉舊城",
-      category: "舊城兩晚",
+      name: "Hotel Indigo Phuket Patong 芭東英迪格",
+      region: "芭東 Patong",
+      category: "海邊兩晚",
       stay: "5/22 入住 → 5/24 退房",
-      hours: "舊城步行範圍",
-      note: "攀牙路 19 號，1927 年中葡式建築，舊名 On On。週六下午入住後，塔廊路行人街、羅曼尼巷、Raya 與 Tu Kab Khao 都走路可到。週一 11:15 的飛機，從這裡出發比從島的南端從容。電話 +66 76 363 700。",
-      lat: 7.883809,
-      lng: 98.388544,
-      places: [{ name: "The Memory at On On", url: gmaps("The Memory at On On Hotel Phuket") }],
-      sources: [{ label: "酒店官網", url: "https://www.thememoryhotel.com/en/" }],
+      hours: "步行約到芭東海灘；泳池全日",
+      note: "Rat U Thit 200 Pee 路 124 號。IHG 精品酒店，評價約 9.4，有泳池，步行約可到芭東海灘。比 Bangla 夜店正中心安靜一截，晚上去 Simon Cabaret 很近。週一去機場車程約 45–75 分，請比住舊城時再早出門。電話 +66 76 609 999。",
+      lat: 7.8993,
+      lng: 98.2999,
+      places: [{ name: "Hotel Indigo Phuket Patong", url: gmaps("Hotel Indigo Phuket Patong") }],
+      sources: [
+        { label: "酒店官網", url: "https://phuketpatong.hotelindigo.com/" },
+        { label: "Expedia", url: "https://www.expedia.com/Phuket-Hotels-Hotel-Indigo-Phuket-Patong.h29752811.Hotel-Information?chkin=2027-05-22&chkout=2027-05-24" },
+      ],
     },
   ],
   restaurants: [
@@ -724,7 +702,7 @@ const TRIP_DATA = {
       rating: "4.2",
       price: "約 200–450 銖",
       hours: "11:00–20:30",
-      note: "攀牙路老店屋，蟹肉炒飯常被提起。和 The Memory 同一條路，市集回來若還想坐下，這是最近的一間。20:30 左右打烊。",
+      note: "攀牙路老店屋，蟹肉炒飯常被提起。位於舊城攀牙路中段，逛完市集或街屋後若還想坐下，這裡很方便。20:30 左右打烊。",
       lat: 7.883686,
       lng: 98.388202,
       places: [
@@ -1623,6 +1601,7 @@ const CAT = {
   beach: { icon: "🏖️", label: "海灘" },
   spa: { icon: "💆", label: "SPA" },
   market: { icon: "🏮", label: "市集" },
+  show: { icon: "🎭", label: "表演" },
   buffer: { icon: "🌿", label: "留白" },
   note: { icon: "⚠️", label: "注意" },
   other: { icon: "📌", label: "行程" },
@@ -1669,6 +1648,7 @@ function categorize(item) {
   if (/SPA|按摩|水療/.test(t)) return "spa";
   if (/午餐|晚餐|早餐|用餐/.test(t)) return "food";
   if (/酒店|入住|退房|寄行李/.test(t)) return "hotel";
+  if (/人妖|Cabaret|秀|表演/.test(t)) return "show";
   if (/海灘|海角|大佛|市集|行人街/.test(t)) return "sight";
   if (/Grab|機場|上車/.test(t)) return "transport";
   if (/留白|休息/.test(t)) return "buffer";
@@ -1711,7 +1691,9 @@ function linkLabel(url) {
     if (host.includes("google") || host.includes("goo.gl") || host.includes("maps")) return "Google 地圖";
     if (host.includes("hkexpress")) return "香港快運";
     if (host.includes("katathani")) return "酒店官網";
-    if (host.includes("thememoryhotel")) return "酒店官網";
+    if (host.includes("hotelindigo") || host.includes("ihg")) return "酒店官網";
+    if (host.includes("simoncabaret")) return "Simon Cabaret";
+    if (host.includes("expedia")) return "Expedia";
     if (host.includes("letsrelax")) return "Let's Relax";
     if (host.includes("oasisspa")) return "Oasis Spa";
     if (host.includes("boathouse")) return "The Boathouse";
@@ -1764,7 +1746,7 @@ function init() {
     "hotel",
     "🏨 酒店",
     "酒店",
-    "只住兩處，中間搬一次。前三晚在安靜的卡塔諾伊看海；週六下午改住舊城，剛好碰上週末市集，週一去機場也近一截。若最後決定全程留在海灘，仍可週末搭 Grab 來回舊城，但 5 月 24 日要再早約一小時出門。"
+    "只住兩處，中間搬一次。前三晚在安靜的卡塔諾伊看海；週六下午改住芭東 Hotel Indigo，方便晚上 Simon Cabaret，也仍可靠海。舊城與週末市集改為白天用 Grab 可選前往。5 月 24 日從芭東去機場，請比住舊城時再早約 15–30 分出門。"
   );
   renderSpotList(
     "view-restaurants",
