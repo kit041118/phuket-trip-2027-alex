@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f7f4ee" />
+  <meta name="description" content="布吉之旅 2027 — 5月19日至24日，香港快運隨心飛，卡塔諾伊與普吉舊城慢遊指南。" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="布吉之旅" />
+  <title>布吉之旅｜2027.05.19–05.24</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20270519b" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='14' width='64' height='64' fill='%231c7c84'/%3E%3Cpath d='M8 40c8-8 14-8 22 0s14 8 26 0' fill='none' stroke='%23fff6ea' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='44' cy='22' r='6' fill='%23f0b07a'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">🌊</div>
+        <div>
+          <h1>布吉之旅</h1>
+          <div class="subtitle">2027.05.19 – 05.24</div>
+        </div>
+      </div>
+      <nav class="nav-tabs" aria-label="主要導覽">
+        <button type="button" class="nav-tab active" data-view="home">總覽</button>
+        <button type="button" class="nav-tab" data-view="itinerary">行程</button>
+        <button type="button" class="nav-tab" data-view="hotels">酒店</button>
+        <button type="button" class="nav-tab" data-view="restaurants">餐廳</button>
+        <button type="button" class="nav-tab" data-view="spas">SPA</button>
+        <button type="button" class="nav-tab" data-view="beaches">海灘</button>
+        <button type="button" class="nav-tab" data-view="markets">市集</button>
+        <button type="button" class="nav-tab" data-view="transport">交通</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section id="view-home" class="view active" aria-label="行程總覽"></section>
+
+    <section id="view-itinerary" class="view" aria-label="每日行程">
+      <div class="itinerary-toolbar">
+        <div class="day-scroller" id="day-scroller" role="tablist" aria-label="選擇日子"></div>
+        <div class="search-row">
+          <div class="search-box">
+            <span aria-hidden="true">🔍</span>
+            <input id="search-input" type="search" placeholder="搜尋海灘、餐廳、酒店…" autocomplete="off" />
+          </div>
+        </div>
+      </div>
+      <div class="day-header" id="day-header"></div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section id="view-hotels" class="view" aria-label="酒店"></section>
+    <section id="view-restaurants" class="view" aria-label="餐廳"></section>
+    <section id="view-spas" class="view" aria-label="SPA"></section>
+    <section id="view-beaches" class="view" aria-label="海灘"></section>
+    <section id="view-markets" class="view" aria-label="市集"></section>
+    <section id="view-transport" class="view" aria-label="交通"></section>
+  </main>
+
+  <footer class="app-footer">
+    行程可離線閱讀 · 地圖使用 OpenStreetMap · 營業時間出發前請再核對
+  </footer>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="圖片預覽">
+    <button type="button" class="lightbox-close" id="lightbox-close" aria-label="關閉">×</button>
+    <img id="lightbox-img" alt="放大預覽" />
+  </div>
+
+  <noscript>
+    <p class="banner" style="margin:16px">請啟用 JavaScript，以顯示行程、地圖與分頁。</p>
+  </noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="app.js?v=20270519b"></script>
+</body>
+</html>

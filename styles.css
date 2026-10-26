@@ -1,0 +1,1539 @@
+/* 布吉之旅 — 海與日落 */
+:root {
+  --bg: #f7f4ee;
+  --bg-elevated: #ffffff;
+  --sakura: #f0c4a4;
+  --sakura-soft: #fff1e6;
+  --sakura-deep: #d06a45;
+  --ink: #1e3338;
+  --ink-muted: #5c6f76;
+  --ink-faint: #8aa0a6;
+  --mist: #e4eeed;
+  --sky: #9ed4d2;
+  --sky-soft: #e7f6f4;
+  --sky-deep: #1c7c84;
+  --matcha: #2f8f7a;
+  --matcha-soft: #e5f5f0;
+  --amber: #d4924a;
+  --amber-soft: #fff3e2;
+  --card-shadow: 0 2px 12px rgba(30, 51, 56, 0.06), 0 1px 3px rgba(30, 51, 56, 0.04);
+  --card-shadow-hover: 0 8px 28px rgba(30, 51, 56, 0.1), 0 2px 8px rgba(30, 51, 56, 0.06);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --font: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", "Hiragino Sans GB", sans-serif;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  min-height: 100dvh;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 8% -10%, rgba(240, 168, 112, 0.38), transparent),
+    radial-gradient(ellipse 70% 46% at 100% 0%, rgba(120, 198, 196, 0.45), transparent),
+    radial-gradient(ellipse 50% 30% at 50% 100%, rgba(255, 214, 170, 0.35), transparent);
+  background-attachment: fixed;
+}
+
+a { color: var(--sky-deep); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* —— 頂部 —— */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  background: rgba(250, 247, 242, 0.85);
+  border-bottom: 1px solid rgba(232, 228, 220, 0.8);
+  padding: 12px 16px 10px;
+}
+
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, var(--sakura), var(--sky));
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(212, 132, 154, 0.25);
+}
+
+.brand h1 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+.brand .subtitle {
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--mist);
+  padding: 3px;
+  border-radius: 12px;
+}
+
+.nav-tab {
+  padding: 7px 14px;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  transition: all 0.2s ease;
+}
+
+.nav-tab.active {
+  background: var(--bg-elevated);
+  color: var(--ink);
+  box-shadow: 0 1px 4px rgba(44, 42, 40, 0.08);
+}
+
+.nav-tab:hover:not(.active) { color: var(--ink); }
+
+/* —— 主內容 —— */
+.main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 16px calc(32px + var(--safe-bottom));
+}
+
+.view { display: none; animation: fadeUp 0.35s ease; }
+.view.active { display: block; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* —— 首頁總覽 —— */
+.hero-card {
+  background: var(--bg-elevated);
+  border-radius: var(--radius);
+  padding: 24px 22px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(232, 228, 220, 0.6);
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-card::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--sakura-soft), transparent 70%);
+  pointer-events: none;
+}
+
+.hero-dates {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--sakura-soft);
+  color: var(--sakura-deep);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.hero-card h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.hero-card .hero-sub {
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.stat {
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  padding: 12px 10px;
+  text-align: center;
+}
+
+.stat .num {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.stat .label {
+  font-size: 0.7rem;
+  color: var(--ink-faint);
+  margin-top: 2px;
+}
+
+.flight-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--sky-soft);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(197, 217, 232, 0.5);
+}
+
+.flight-code {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--sky-deep);
+  background: white;
+  padding: 4px 10px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.flight-detail {
+  flex: 1;
+  min-width: 0;
+}
+
+.flight-route {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.flight-meta {
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+}
+
+.section-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 24px 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title .badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: var(--mist);
+  color: var(--ink-muted);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+/* 日子卡片網格 */
+.day-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.day-chip {
+  background: var(--bg-elevated);
+  border: 1px solid var(--mist);
+  border-radius: var(--radius-sm);
+  padding: 14px 12px;
+  text-align: left;
+  transition: all 0.2s ease;
+  box-shadow: var(--card-shadow);
+}
+
+.day-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--sakura);
+}
+
+.day-chip .d-num {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--sakura-deep);
+  letter-spacing: 0.04em;
+}
+
+.day-chip .d-date {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 2px 0;
+}
+
+.day-chip .d-region {
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  line-height: 1.3;
+}
+
+/* 畫廊 */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.gallery button {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: var(--mist);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease;
+}
+
+.gallery button:hover { transform: scale(1.02); }
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 周遊券卡片 */
+.pass-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 640px) {
+  .pass-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.pass-card {
+  background: var(--bg-elevated);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--mist);
+  display: flex;
+  flex-direction: column;
+}
+
+.pass-image-btn {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: var(--mist);
+  position: relative;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.pass-image-btn:focus-visible {
+  outline: 3px solid var(--sakura-deep);
+  outline-offset: -3px;
+}
+
+.pass-card img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  object-position: top;
+  background: var(--mist);
+  transition: transform 0.25s ease;
+}
+
+.pass-image-btn:hover img,
+.pass-image-btn:active img {
+  transform: scale(1.03);
+}
+
+.pass-zoom-hint {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: rgba(44, 42, 40, 0.72);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 999px;
+  pointer-events: none;
+  letter-spacing: 0.02em;
+}
+
+.pass-body {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pass-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.pass-body p {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  flex: 1;
+}
+
+.pass-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* —— 行程頁 —— */
+.itinerary-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.day-scroller {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 4px 2px 10px;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+  mask-image: linear-gradient(to right, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, #000 92%, transparent);
+}
+
+.day-scroller::-webkit-scrollbar { height: 4px; }
+.day-scroller::-webkit-scrollbar-thumb { background: var(--mist); border-radius: 4px; }
+
+.day-pill {
+  flex-shrink: 0;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--bg-elevated);
+  border: 1.5px solid var(--mist);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.day-pill.active {
+  background: linear-gradient(135deg, #e07a45, #1c7c84);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(208, 106, 69, 0.32);
+}
+
+.day-pill:hover:not(.active) {
+  border-color: var(--sakura);
+  color: var(--ink);
+}
+
+.search-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-elevated);
+  border: 1.5px solid var(--mist);
+  border-radius: 12px;
+  padding: 10px 14px;
+  transition: border-color 0.2s;
+}
+
+.search-box:focus-within { border-color: var(--sakura-deep); }
+
+.search-box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--ink);
+  min-width: 0;
+}
+
+.search-box input::placeholder { color: var(--ink-faint); }
+
+.filter-btn {
+  flex-shrink: 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--bg-elevated);
+  border: 1.5px solid var(--mist);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.filter-btn.active {
+  background: var(--sky-soft);
+  border-color: var(--sky-deep);
+  color: var(--sky-deep);
+}
+
+/* 日子標題列 */
+.day-header {
+  background: var(--bg-elevated);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--mist);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.day-header-left h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.day-header-left .meta {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin-top: 2px;
+}
+
+.progress-pill {
+  background: var(--matcha-soft);
+  color: var(--matcha);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+/* 時間軸 */
+.timeline {
+  position: relative;
+  padding-left: 36px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--sakura), var(--sky), var(--mist));
+  border-radius: 2px;
+}
+
+.tl-item {
+  position: relative;
+  margin-bottom: 14px;
+  animation: fadeUp 0.4s ease both;
+}
+
+.tl-item.hidden { display: none; }
+
+.tl-dot {
+  position: absolute;
+  left: -36px;
+  top: 16px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 2px solid var(--sakura);
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  line-height: 1;
+  z-index: 1;
+  box-shadow: 0 0 0 4px var(--bg);
+}
+
+.tl-card {
+  background: var(--bg-elevated);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.tl-card:hover {
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--sakura);
+}
+
+.tl-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--sakura-deep);
+  background: var(--sakura-soft);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.tl-time.warn {
+  background: var(--amber-soft);
+  color: var(--amber);
+}
+
+.tl-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0;
+  word-break: break-word;
+}
+
+.tl-facts {
+  margin-top: 14px;
+  padding: 12px 14px;
+  background: var(--sky-soft);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(197, 217, 232, 0.55);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tl-fact {
+  display: grid;
+  grid-template-columns: minmax(4.5em, 7.2em) 1fr;
+  gap: 8px 12px;
+  align-items: start;
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.tl-fact-label {
+  color: var(--ink-faint);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  padding-top: 2px;
+  line-height: 1.35;
+}
+
+.tl-fact-value {
+  color: var(--ink);
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.tl-fact.is-pass .tl-fact-value {
+  color: var(--matcha);
+}
+
+.tl-fact.is-fare .tl-fact-value {
+  color: var(--amber);
+  font-weight: 600;
+}
+
+.tl-fact-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--matcha-soft);
+  color: var(--matcha);
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid rgba(122, 158, 126, 0.28);
+}
+
+.tl-fact.is-pass .tl-fact-badge {
+  background: linear-gradient(135deg, var(--matcha-soft), var(--sakura-soft));
+  color: #5f8a64;
+  border-color: rgba(212, 132, 154, 0.25);
+}
+
+.tl-notes {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tl-notes:empty { display: none; margin: 0; }
+
+.tl-note-line {
+  font-size: 0.86rem;
+  color: var(--ink-muted);
+  line-height: 1.7;
+  padding: 8px 12px;
+  background: rgba(232, 228, 220, 0.35);
+  border-radius: 10px;
+  border-left: 3px solid var(--mist);
+  word-break: break-word;
+}
+
+.tl-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+@media (max-width: 480px) {
+  .tl-fact {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .tl-fact-label {
+    padding-top: 0;
+  }
+
+  .tl-facts {
+    padding: 12px;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition: all 0.15s ease;
+  text-decoration: none !important;
+}
+
+.btn-map {
+  background: linear-gradient(135deg, #5a8fb0, #4a7a9a);
+  color: white !important;
+  box-shadow: 0 2px 8px rgba(90, 143, 176, 0.3);
+}
+
+.btn-map:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(90, 143, 176, 0.4);
+}
+
+.btn-link {
+  background: var(--bg);
+  color: var(--ink) !important;
+  border: 1.5px solid var(--mist);
+}
+
+.btn-link:hover {
+  border-color: var(--sakura-deep);
+  color: var(--sakura-deep) !important;
+}
+
+.btn-pass {
+  background: var(--sakura-soft);
+  color: var(--sakura-deep) !important;
+}
+
+.btn-pass:hover {
+  background: var(--sakura);
+  color: white !important;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--ink-muted);
+}
+
+.empty-state .icon { font-size: 2.5rem; margin-bottom: 12px; }
+
+/* —— Lightbox —— */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(44, 42, 40, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 12px 24px;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.2s ease;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-x pan-y pinch-zoom;
+}
+
+.lightbox.open { display: flex; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.lightbox img {
+  width: auto;
+  height: auto;
+  max-width: min(1200px, 100%);
+  max-height: none;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  object-fit: contain;
+  touch-action: pinch-zoom;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  font-size: 1.4rem;
+  display: grid;
+  place-items: center;
+  transition: background 0.15s;
+}
+
+.lightbox-close:hover { background: rgba(255,255,255,0.3); }
+
+/* —— 頁腳 —— */
+.app-footer {
+  text-align: center;
+  padding: 24px 16px;
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+}
+
+/* —— 響應式 —— */
+@media (max-width: 480px) {
+  .nav-tab { padding: 7px 10px; font-size: 0.75rem; }
+  .brand h1 { font-size: 1rem; }
+  .stat-row { gap: 6px; }
+  .stat .num { font-size: 1.15rem; }
+  .gallery { grid-template-columns: 1fr 1fr; }
+  .gallery button:last-child:nth-child(3) { grid-column: 1 / -1; aspect-ratio: 16/7; }
+  .hero-card { padding: 18px 16px; }
+  .hero-card h2 { font-size: 1.35rem; }
+}
+
+@media (min-width: 768px) {
+  .app-header { padding: 14px 24px 12px; }
+  .main { padding: 28px 24px 48px; }
+  .itinerary-toolbar {
+    flex-direction: row;
+    align-items: center;
+  }
+  .day-scroller { flex: 1; }
+  .itinerary-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-row { width: 100%; flex-shrink: 0; }
+  .day-scroller {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}
+
+/* —— 地圖地點按鈕 —— */
+.btn-place {
+  background: linear-gradient(135deg, var(--sakura-deep), var(--sky-deep));
+  color: white !important;
+  box-shadow: 0 2px 8px rgba(28, 124, 132, 0.28);
+}
+.btn-place:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(212, 132, 154, 0.45);
+}
+
+.tl-title-link {
+  display: inline;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+.tl-title-link:hover { color: var(--sakura-deep) !important; }
+.map-chip {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--sakura-deep);
+  background: var(--sakura-soft);
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* —— 天氣小卡 —— */
+.weather-loading {
+  text-align: center;
+  padding: 20px;
+  color: var(--ink-muted);
+  font-size: 0.9rem;
+  background: var(--bg-elevated);
+  border-radius: var(--radius);
+  border: 1px dashed var(--mist);
+  margin-bottom: 8px;
+}
+.weather-fallback {
+  text-align: center;
+  padding: 24px 16px;
+  background: var(--sky-soft);
+  border-radius: var(--radius);
+  color: var(--ink);
+  margin: 8px 0 20px;
+  border: 1px solid var(--sky);
+}
+.weather-fallback-sub {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+}
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.weather-card {
+  background: var(--bg-elevated);
+  border-radius: 14px;
+  padding: 12px 10px;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--mist);
+}
+.weather-date {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--sakura-deep);
+}
+.weather-region {
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  margin: 2px 0 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.weather-emoji { font-size: 1.6rem; line-height: 1.2; }
+.weather-label {
+  font-size: 0.7rem;
+  color: var(--ink-faint);
+  margin: 2px 0 4px;
+}
+.weather-temp {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.weather-temp .tmax { color: var(--ink); }
+.weather-temp .tsep { color: var(--ink-faint); margin: 0 2px; }
+.weather-temp .tmin { color: var(--sky-deep); }
+.weather-note {
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  margin-bottom: 20px;
+}
+
+
+/* —— 富士山能見度（總覽） —— */
+.fuji-card {
+  margin: 8px 0 20px;
+  border-left: 4px solid #5b8def;
+  padding: 20px 18px 18px;
+}
+.fuji-card .spot-badge {
+  background: #e8f0fe;
+  color: #2f5bb7;
+  margin-bottom: 10px;
+}
+.fuji-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+.fuji-card .spot-note {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.fuji-card .spot-tip {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.fuji-disclaimer {
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  line-height: 1.5;
+  margin: 0 0 4px;
+}
+.fuji-card .source-block {
+  margin-top: 14px;
+  padding-top: 14px;
+}
+.fuji-card .btn-source {
+  width: 100%;
+  justify-content: flex-start;
+  white-space: normal;
+  text-align: left;
+  padding: 10px 14px;
+  line-height: 1.4;
+}
+.fuji-card .spot-actions.sources {
+  flex-direction: column;
+  gap: 10px;
+}
+@media (min-width: 480px) {
+  .fuji-card .btn-source { width: auto; max-width: 100%; }
+  .fuji-card .spot-actions.sources {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+
+
+/* —— 地區分組 —— */
+.spot-filters-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: linear-gradient(var(--bg) 88%, transparent);
+  padding: 2px 0 8px;
+  margin-bottom: 6px;
+}
+.filter-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--ink-muted);
+  margin: 6px 4px 2px;
+  letter-spacing: 0.04em;
+}
+.region-filter {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 2px 2px 8px;
+  margin-bottom: 0;
+  position: static;
+  background: transparent;
+}
+.region-filter::-webkit-scrollbar { display: none; }
+.region-chip {
+  flex-shrink: 0;
+  border: 1px solid var(--mist);
+  background: var(--bg-elevated);
+  color: var(--ink-muted);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 1.3;
+}
+.region-chip.is-active {
+  background: var(--sky-soft);
+  border-color: var(--sky);
+  color: var(--sky-deep);
+}
+.region-count {
+  display: inline-block;
+  font-size: 0.68rem;
+  opacity: 0.75;
+  margin-left: 2px;
+}
+.region-section {
+  margin-bottom: 18px;
+}
+.region-heading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 8px 0 10px;
+  color: var(--ink);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.region-heading .region-count {
+  font-weight: 600;
+  color: var(--ink-muted);
+}
+
+/* —— 紅葉／燈飾卡片 —— */
+.spot-grid {
+  display: grid;
+  gap: 14px;
+}
+.spot-card {
+  background: var(--bg-elevated);
+  border-radius: var(--radius);
+  padding: 18px 18px 16px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--mist);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.spot-card:hover {
+  box-shadow: var(--card-shadow-hover);
+}
+.spot-card.foliage { border-left: 4px solid #c45c5c; }
+.spot-card.lights { border-left: 4px solid #d4a84b; }
+.spot-card.beauty { border-left: 4px solid #d46a8a; }
+.spot-card.food { border-left: 4px solid #e07a3d; }
+.spot-card.shop { border-left: 4px solid #3a9a9a; }
+
+.spot-card.has-media {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+}
+
+/* 篩選隱藏：必須蓋過 .has-media 的 display:flex，否則卡片藏不掉 */
+.spot-card[hidden],
+.region-section[hidden] {
+  display: none !important;
+}
+.spot-body {
+  flex: 1;
+  min-width: 0;
+}
+.spot-media {
+  width: 118px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.spot-media img {
+  width: 100%;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #eee;
+  display: block;
+}
+.spot-credit {
+  font-size: 0.65rem;
+  color: var(--ink-muted);
+  line-height: 1.2;
+  text-align: right;
+}
+@media (max-width: 400px) {
+  .spot-media { width: 96px; }
+  .spot-media img { height: 72px; }
+}
+
+.spot-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--ink-muted);
+  background: var(--amber-soft);
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+.spot-card.foliage .spot-badge { background: #fde8e8; color: #a94442; }
+.spot-card.lights .spot-badge { background: #fff6e0; color: #9a7b2f; }
+.spot-card.beauty .spot-badge { background: #fce4ec; color: #ad1457; }
+.spot-card.food .spot-badge { background: #fff0e6; color: #c45c1a; }
+.spot-card.shop .spot-badge { background: #e0f2f1; color: #00695c; }
+
+.spot-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 6px 0 4px;
+}
+.spot-tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.3;
+  border: 1px solid transparent;
+}
+.spot-tag-warn {
+  background: #fff0e8;
+  color: #c2410c;
+  border-color: #fdba74;
+}
+.spot-tag-muted {
+  background: #f3f4f6;
+  color: #6b7280;
+  border-color: #e5e7eb;
+}
+.spot-tag-info {
+  background: #eef6ff;
+  color: #1d4ed8;
+  border-color: #bfdbfe;
+}
+.spot-tag-hours {
+  background: #ecfdf5;
+  color: #047857;
+  border-color: #a7f3d0;
+  font-weight: 800;
+  max-width: 100%;
+  white-space: normal;
+}
+
+.spot-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+.spot-note {
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+.spot-tip {
+  font-size: 0.82rem;
+  color: var(--matcha);
+  background: var(--matcha-soft);
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.spot-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.spot-meta-row .chip {
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: var(--sky-soft);
+  color: var(--sky-deep);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.spot-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* 導覽：更多分頁時可橫向捲動 */
+.nav-tabs {
+  overflow-x: auto;
+  max-width: min(100%, 420px);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.nav-tabs::-webkit-scrollbar { display: none; }
+.nav-tab { white-space: nowrap; flex-shrink: 0; }
+
+@media (max-width: 480px) {
+  .header-inner { flex-wrap: wrap; }
+  .nav-tabs { max-width: 100%; width: 100%; order: 3; }
+  .weather-grid { grid-template-columns: repeat(4, 1fr); }
+  .weather-card { padding: 10px 6px; }
+}
+
+
+/* 參考來源 */
+.source-block {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--mist);
+}
+.source-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--ink-muted);
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+.btn-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--sky-soft);
+  color: var(--sky-deep);
+  border: 1px solid var(--sky);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1.3;
+  max-width: 100%;
+}
+.btn-source:hover {
+  background: var(--sky);
+  text-decoration: none;
+  color: var(--ink);
+}
+.spot-actions.sources {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+
+/* —— 分頁小地圖（Leaflet） —— */
+.spot-map-wrap {
+  margin: 0 0 14px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--mist);
+  background: var(--bg-elevated);
+  box-shadow: var(--card-shadow);
+}
+.spot-map {
+  width: 100%;
+  height: 250px;
+  z-index: 0;
+  background: #e8eef3;
+}
+.spot-map-hint {
+  margin: 0;
+  padding: 8px 12px 10px;
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  line-height: 1.4;
+}
+.spot-map-pin {
+  background: transparent;
+  border: none;
+}
+.spot-map-pin span {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.35);
+}
+.spot-map-popup {
+  font-size: 0.85rem;
+  line-height: 1.35;
+  min-width: 120px;
+}
+.spot-map-popup strong {
+  display: block;
+  margin-bottom: 6px;
+}
+.spot-map-popup a {
+  color: var(--sky-deep);
+  font-weight: 600;
+  text-decoration: none;
+}
+@media (max-width: 560px) {
+  .spot-map { height: 220px; }
+}
+
+
+.spot-map-locate-wrap a.spot-map-locate {
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a73e8;
+  background: #fff;
+  text-decoration: none;
+}
+.spot-map-locate-wrap a.spot-map-locate.is-loading {
+  opacity: 0.55;
+  pointer-events: none;
+}
+.spot-map-locate-wrap a.spot-map-locate.is-active {
+  color: #0b57d0;
+  background: #e8f0fe;
+}
+
+/* —— 布吉：導覽、總覽、分類色 —— */
+.nav-tabs {
+  overflow-x: auto;
+  scrollbar-width: none;
+  max-width: 100%;
+}
+.nav-tabs::-webkit-scrollbar { display: none; }
+.nav-tab { flex: 0 0 auto; white-space: nowrap; }
+
+@media (max-width: 980px) {
+  .header-inner { flex-wrap: wrap; }
+  .nav-tabs { width: 100%; order: 3; justify-content: flex-start; }
+  .spot-filters-sticky { top: 108px; }
+}
+
+@media (max-width: 720px) {
+  .nav-tabs {
+    flex-wrap: wrap;
+    overflow: visible;
+    row-gap: 4px;
+  }
+  .spot-filters-sticky { top: 148px; }
+  .weather-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.spot-card.hotel { border-left: 4px solid #1c7c84; }
+.spot-card.spa { border-left: 4px solid #b85c8a; }
+.spot-card.beach { border-left: 4px solid #2a8fbf; }
+.spot-card.market { border-left: 4px solid #c4892a; }
+.spot-card.transport { border-left: 4px solid #3d5a80; }
+
+.brand-mark {
+  background: linear-gradient(145deg, #f0b07a, #7ec8c4);
+  box-shadow: 0 2px 8px rgba(208, 106, 69, 0.28);
+}
+
+.banner {
+  background: #fff6ea;
+  border: 1px solid rgba(212, 146, 74, 0.4);
+  color: #6d4b1f;
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+.flight-figure { margin: 4px 0 0; }
+.flight-figure button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--mist);
+  box-shadow: var(--card-shadow);
+  background: white;
+  cursor: zoom-in;
+}
+.flight-figure img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: white;
+}
+.flight-caption {
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  margin-top: 8px;
+}
+
+.area-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+@media (min-width: 800px) {
+  .area-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+.area-card, .tip-card {
+  background: var(--bg-elevated);
+  border-radius: var(--radius);
+  padding: 16px 16px 14px;
+  border: 1px solid var(--mist);
+  box-shadow: var(--card-shadow);
+}
+.area-card h3, .tip-card h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+.area-card p, .tip-card li {
+  font-size: 0.86rem;
+  color: var(--ink-muted);
+  line-height: 1.55;
+}
+.tip-card ul { margin: 0; padding-left: 1.15em; }
+.tip-card li { margin: 7px 0; color: var(--ink); }
+.tip-card li span { color: var(--ink-muted); }
+
+.day-summary {
+  margin-top: 8px;
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+  max-width: 68ch;
+}
+
+.spot-card.hotel .spot-badge { background: #e5f6f6; color: #14666c; }
+.spot-card.spa .spot-badge { background: #fde8f3; color: #9d3d6e; }
+.spot-card.beach .spot-badge { background: #e6f4fb; color: #1a6f99; }
+.spot-card.market .spot-badge { background: #fff3df; color: #9a6410; }
+.spot-card.transport .spot-badge { background: #e8eef8; color: #2c4d7a; }
+
+.gallery.gallery-single { grid-template-columns: 1fr; }
+.gallery.gallery-single button { aspect-ratio: 16 / 8; }
