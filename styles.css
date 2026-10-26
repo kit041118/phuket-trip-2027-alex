@@ -1184,6 +1184,20 @@ button {
   background: #eee;
   display: block;
 }
+
+.spot-media .spot-thumb {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.spot-media .spot-thumb:focus-visible {
+  outline: 2px solid var(--teal, #1c7c84);
+  outline-offset: 2px;
+}
 .spot-credit {
   font-size: 0.65rem;
   color: var(--ink-muted);
@@ -1451,7 +1465,6 @@ button {
 .spot-card.spa { border-left: 4px solid #b85c8a; }
 .spot-card.beach { border-left: 4px solid #2a8fbf; }
 .spot-card.market { border-left: 4px solid #c4892a; }
-.spot-card.transport { border-left: 4px solid #3d5a80; }
 
 .brand-mark {
   background: linear-gradient(145deg, #f0b07a, #7ec8c4);
@@ -1533,7 +1546,6 @@ button {
 .spot-card.spa .spot-badge { background: #fde8f3; color: #9d3d6e; }
 .spot-card.beach .spot-badge { background: #e6f4fb; color: #1a6f99; }
 .spot-card.market .spot-badge { background: #fff3df; color: #9a6410; }
-.spot-card.transport .spot-badge { background: #e8eef8; color: #2c4d7a; }
 
 .gallery.gallery-single { grid-template-columns: 1fr; }
 .gallery.gallery-single button { aspect-ratio: 16 / 8; }

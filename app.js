@@ -485,41 +485,202 @@ const TRIP_DATA = {
   ],
   restaurants: [
     {
-      name: "The Boathouse",
+      name: "PRU（Trisara）",
+      region: "澄泰",
+      category: "米其林",
+      cuisine: "高級泰菜",
+      rating: "4.7",
+      price: "約 5,000–8,000 銖／人",
+      hours: "晚餐為主；週一、日休息（請再核對）",
+      hours_uncertain: true,
+      need_reserve: true,
+      note: "島上少數米其林星級餐廳，Trisara 內的開放式廚房與時令菜單。這趟沒有排入正日，若想專程北上，建議提早訂位，由卡塔約 50–70 分。",
+      lat: 8.038478,
+      lng: 98.276724,
+      places: [
+        { name: "PRU", url: gmaps("PRU Restaurant Trisara Phuket") }
+      ],
+      sources: [
+        { label: "官網", url: "https://prurestaurant.com/" }
+      ],
+      image: "assets/places/food-tasting.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "The Boathouse Wine & Grill",
       region: "卡塔",
-      category: "海鮮",
+      category: "海景",
       cuisine: "泰式海鮮",
+      rating: "4.4",
+      price: "約 800–1,500 銖",
       hours: "07:00–23:00（晚餐最後點餐約 22:00）",
       hours_source: "https://boathouse-phuket.com/dining",
-      price: "約 800 銖起",
-      note: "卡塔沙灘上的老牌海景餐廳，早午晚都開，所以抵達日午餐和看完海角的晚餐都順。菜式偏海鮮與西式，不是街邊檔。",
+      note: "卡塔沙灘上的老牌海景餐廳，早午晚都開。抵達日午餐與看完海角的晚餐都順路。菜式偏海鮮與西式，不是街邊檔。",
       lat: 7.814355,
       lng: 98.299062,
-      places: [{ name: "The Boathouse", url: gmaps("The Boathouse Phuket Kata") }],
-      sources: [{ label: "官網用餐頁", url: "https://boathouse-phuket.com/dining" }],
-    },
+      places: [
+        { name: "The Boathouse", url: gmaps("The Boathouse Phuket Kata") }
+      ],
+      sources: [
+        { label: "官網用餐頁", url: "https://boathouse-phuket.com/dining" }
+      ],
+      image: "assets/places/food-wine.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "Mom Tri's Kitchen",
+      region: "卡塔諾伊",
+      category: "海景",
+      cuisine: "融合料理",
+      rating: "4.5",
+      price: "約 1,200–2,500 銖",
+      hours: "午餐與晚餐（請再核對）",
+      hours_uncertain: true,
+      need_reserve: true,
+      note: "Villa Royale 懸崖上的精緻餐廳，俯瞰卡塔諾伊。離酒店極近，適合想留在南岸、又想吃得精一點的晚上。建議先訂海景位。",
+      lat: 7.8035,
+      lng: 98.2988,
+      places: [
+        { name: "Mom Tri's Kitchen", url: gmaps("Mom Tri's Kitchen Kata Noi Phuket") }
+      ],
+      image: "assets/places/food-cliff.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
       name: "On The Rock",
       region: "卡隆",
       category: "海鮮",
       cuisine: "泰式海鮮",
+      rating: "4.4",
+      price: "約 800–1,800 銖",
       hours: "12:00–22:00",
+      need_reserve: true,
       note: "Marina Phuket 懸崖上的海鮮，面向安達曼海。排在 SPA 那天的晚餐。由卡塔諾伊約 15 分鐘。建議先訂，訂不到就回 The Boathouse。",
       lat: 7.829152,
       lng: 98.293813,
-      places: [{ name: "On The Rock", url: gmaps("On The Rock Marina Phuket") }],
-    },
+      places: [
+        { name: "On The Rock", url: gmaps("On The Rock Marina Phuket") }
+      ],
+      image: "assets/places/food-seafood.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
-      name: "After Beach Bar",
-      region: "卡塔諾伊",
-      category: "泰菜",
-      cuisine: "泰式",
-      hours: "12:00–22:00",
-      note: "卡塔諾伊往奈漢的山坡小店，reggae 氣氛，日落好看，菜是家常泰菜。抵達日若還有精神，比再坐車找「名店」合適。",
-      lat: 7.808954,
-      lng: 98.302168,
-      places: [{ name: "After Beach Bar", url: gmaps("After Beach Bar Kata Noi") }],
-    },
+      name: "Baan Rim Pa",
+      region: "芭東",
+      category: "懸崖",
+      cuisine: "高級泰菜",
+      rating: "4.5",
+      price: "約 1,500–3,000 銖",
+      hours: "午餐與晚餐",
+      hours_uncertain: true,
+      need_reserve: true,
+      note: "卡林灣懸崖上的經典泰菜，日落與夜景都很漂亮。由卡塔約 25–35 分。這趟不排正日；若想專程吃一頓高檔泰菜，優先訂日落時段。",
+      lat: 7.9085,
+      lng: 98.2835,
+      places: [
+        { name: "Baan Rim Pa", url: gmaps("Baan Rim Pa Phuket Kalim") }
+      ],
+      image: "assets/places/food-cliff.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "Acqua Restaurant",
+      region: "芭東",
+      category: "義式",
+      cuisine: "義式",
+      rating: "4.6",
+      price: "約 2,000–4,000 銖",
+      hours: "晚餐為主（請再核對）",
+      hours_uncertain: true,
+      need_reserve: true,
+      note: "卡林灣上的義式高級餐廳，主廚 Alessandro Frau，pasta 與 tasting menu 常被提起。由卡塔約半小時。專程過去要預留整晚。",
+      lat: 7.9102,
+      lng: 98.2828,
+      places: [
+        { name: "Acqua", url: gmaps("Acqua Restaurant Phuket Kalim") }
+      ],
+      image: "assets/places/food-italian.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "Catch Beach Club",
+      region: "邦濤",
+      category: "海灘俱樂部",
+      cuisine: "西式",
+      rating: "4.3",
+      price: "約 800–2,000 銖",
+      hours: "日間至傍晚（請再核對）",
+      hours_uncertain: true,
+      note: "邦濤沙灘上的 beach club，氣氛輕鬆、海景好。適合中午吃完再躺一天；不是正餐米其林路線。由卡塔約 40–50 分。",
+      lat: 7.9945,
+      lng: 98.2805,
+      places: [
+        { name: "Catch Beach Club", url: gmaps("Catch Beach Club Bang Tao Phuket") }
+      ],
+      image: "assets/places/food-beachclub.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "Siam Supper Club",
+      region: "澄泰",
+      category: "西泰融合",
+      cuisine: "融合料理",
+      rating: "4.4",
+      price: "約 1,200–2,500 銖",
+      hours: "晚餐為主",
+      hours_uncertain: true,
+      need_reserve: true,
+      note: "澄泰一帶的老牌高級餐廳，氣氛偏 lounge，牛排與泰菜都有。和 PRU、Suay 同一北岸走廊，可與邦濤沙灘同一天。",
+      lat: 7.9968,
+      lng: 98.3042,
+      places: [
+        { name: "Siam Supper Club", url: gmaps("Siam Supper Club Phuket Cherngtalay") }
+      ],
+      image: "assets/places/food-fine.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "Black Ginger（The Slate）",
+      region: "邁楊",
+      category: "南泰",
+      cuisine: "高級泰菜",
+      rating: "4.5",
+      price: "約 2,500–4,500 銖",
+      hours: "約 17:30–23:00",
+      need_reserve: true,
+      note: "The Slate 湖上木屋，乘筏進場，南泰精緻菜。機場附近，適合抵達或離開前後專程一頓；由卡塔約一小時。",
+      lat: 8.085162,
+      lng: 98.298309,
+      places: [
+        { name: "Black Ginger", url: gmaps("Black Ginger The Slate Phuket") }
+      ],
+      sources: [
+        { label: "官網", url: "https://www.blackginger.com/" }
+      ],
+      image: "assets/places/food-raft.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "Blue Elephant Phuket",
+      region: "普吉舊城",
+      category: "皇家泰菜",
+      cuisine: "高級泰菜",
+      rating: "4.4",
+      price: "約 1,200–2,800 銖",
+      hours: "約 09:00–22:30",
+      need_reserve: true,
+      note: "甲米路的中葡總督府邸，主廚 Nooror 的皇家與南泰菜。舊城住宿期間可步行或短程 Grab。午餐與晚餐都開，適合週日白天避開行人街人潮。",
+      lat: 7.8809,
+      lng: 98.3855,
+      places: [
+        { name: "Blue Elephant", url: gmaps("Blue Elephant Phuket Old Town") }
+      ],
+      sources: [
+        { label: "官網", url: "https://blueelephant.com/restaurant/phuket-restaurant/" }
+      ],
+      image: "assets/places/food-mansion.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
       name: "Raya ระย้า",
       region: "普吉舊城",
@@ -529,85 +690,198 @@ const TRIP_DATA = {
       price: "約 300–600 銖",
       hours: "約 10:30–22:00",
       hours_uncertain: true,
-      note: "迪布路百年老屋，1994 年由家族菜式做成的店，蟹肉黃咖哩麵最常被點。曾列米其林必比登，2026 年指南未再列入，菜仍是同一家。午餐較易入座；週末晚餐致電 076 218 155。由 On On 酒店步行可到。",
+      note: "迪布路百年老屋，蟹肉黃咖哩麵最常被點。曾列米其林必比登。午餐較易入座；週末晚餐致電 076 218 155。",
       lat: 7.885929,
       lng: 98.390905,
-      places: [{ name: "Raya", url: gmaps("Raya Restaurant Dibuk Road Phuket") }],
-    },
+      places: [
+        { name: "Raya", url: gmaps("Raya Restaurant Dibuk Road Phuket") }
+      ],
+      image: "assets/places/food-curry.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
       name: "One Chun",
       region: "普吉舊城",
       category: "普吉菜",
       cuisine: "普吉本地菜",
       rating: "4.4",
+      price: "約 250–500 銖",
       hours: "10:00–22:00（星期二或至 21:00）",
       note: "舊城另一間常被在地人與旅客同時推薦的店，和 Raya 幾乎相鄰。週日 Kopitiam 休息時，這裡可以當早午餐。",
       lat: 7.885781,
       lng: 98.390687,
-      places: [{ name: "One Chun", url: gmaps("One Chun Cafe Restaurant Phuket") }],
-    },
+      places: [
+        { name: "One Chun", url: gmaps("One Chun Cafe Restaurant Phuket") }
+      ],
+      image: "assets/places/food-oldtown.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
       name: "Tu Kab Khao ตู้กับข้าว",
       region: "普吉舊城",
       category: "普吉菜",
       cuisine: "普吉本地菜",
       rating: "4.2",
+      price: "約 200–450 銖",
       hours: "11:00–20:30",
-      note: "攀牙路老店屋，蟹肉炒飯常被提起。和 The Memory 同一條路，市集回來若還想坐下，這是最近的一間。20:30 左右打烊，不要排太晚。",
+      note: "攀牙路老店屋，蟹肉炒飯常被提起。和 The Memory 同一條路，市集回來若還想坐下，這是最近的一間。20:30 左右打烊。",
       lat: 7.883686,
       lng: 98.388202,
-      places: [{ name: "Tu Kab Khao", url: gmaps("Tu Kab Khao Restaurant Phuket") }],
-    },
+      places: [
+        { name: "Tu Kab Khao", url: gmaps("Tu Kab Khao Restaurant Phuket") }
+      ],
+      image: "assets/places/food-crab.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
       name: "Kopitiam by Wilai",
       region: "普吉舊城",
       category: "泰華",
       cuisine: "早午餐",
       rating: "4.6",
+      price: "約 150–350 銖",
       hours: "約 11:00–20:00；星期日休息",
       note: "塔廊路老店屋的泰華家常。這趟只在週六下午用得上。週日行人街當天不開門，不要把早餐押在這裡。",
       lat: 7.884777,
       lng: 98.388084,
-      places: [{ name: "Kopitiam by Wilai", url: gmaps("Kopitiam by Wilai Phuket") }],
-    },
+      places: [
+        { name: "Kopitiam by Wilai", url: gmaps("Kopitiam by Wilai Phuket") }
+      ],
+      image: "assets/places/food-breakfast.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
       name: "Kan Eang @ Pier",
       region: "查龍",
       category: "海鮮",
       cuisine: "泰式海鮮",
+      rating: "4.3",
+      price: "約 500–1,200 銖",
       hours: "約 10:00–23:00",
       hours_uncertain: true,
-      note: "查龍碼頭旁的老海鮮店，樹蔭座位，自 1970 年代經營。這趟沒有排進去，避免多一次跨區。若某晚特別想吃碼頭海鮮，由卡塔或舊城約 20–30 分。",
+      note: "查龍碼頭旁的老海鮮店，樹蔭座位，自 1970 年代經營。想吃碼頭海鮮時由卡塔或舊城約 20–30 分。",
       lat: 7.819901,
       lng: 98.344417,
-      places: [{ name: "Kan Eang @ Pier", url: gmaps("Kan Eang at Pier Chalong") }],
-    },
+      places: [
+        { name: "Kan Eang @ Pier", url: gmaps("Kan Eang at Pier Chalong") }
+      ],
+      image: "assets/places/food-grill.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
-      name: "Natural Restaurant",
-      region: "普吉舊城",
-      category: "泰菜",
-      cuisine: "泰式",
+      name: "Suay Restaurant Cherngtalay",
+      region: "澄泰",
+      category: "現代泰菜",
+      cuisine: "高級泰菜",
+      rating: "4.5",
+      price: "約 800–1,800 銖",
+      hours: "午餐與晚餐（請再核對）",
+      hours_uncertain: true,
+      need_reserve: true,
+      note: "澄泰的現代泰菜，本地食材與創意擺盤。北岸一天可與 Catch、Siam Supper Club 擇一。舊城另有分店，以當日營業為準。",
+      lat: 7.9905,
+      lng: 98.3058,
+      places: [
+        { name: "Suay Cherngtalay", url: gmaps("Suay Restaurant Cherngtalay Phuket") }
+      ],
+      image: "assets/places/food-thai.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "Laem Hin Seafood",
+      region: "普吉鎮",
+      category: "海鮮",
+      cuisine: "泰式海鮮",
+      rating: "4.2",
+      price: "約 400–1,000 銖",
       hours: "午餐至晚間",
       hours_uncertain: true,
-      note: "素萬那普路附近的園林餐廳，在地人與長住客都去。Raya 滿座時的另一個選擇。營業時間請再核對。",
-      lat: 7.881245,
-      lng: 98.384303,
-      places: [{ name: "Natural Restaurant", url: gmaps("Natural Restaurant Phuket Old Town") }],
-    },
+      note: "拉埃欣碼頭一帶的海鮮，本地人常去。由舊城不遠，適合想吃碼頭風味、又不想跨去查龍的晚上。",
+      lat: 7.8365,
+      lng: 98.4112,
+      places: [
+        { name: "Laem Hin Seafood", url: gmaps("Laem Hin Seafood Phuket") }
+      ],
+      image: "assets/places/food-seafood.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
-      name: "Mee Ton Poe หมี่ต้นโพธิ์",
-      region: "喀圖",
-      category: "福建麵",
-      cuisine: "早午餐",
-      hours: "日間為主",
+      name: "Jampa（Tri Vananda）",
+      region: "塔朗",
+      category: "農場餐桌",
+      cuisine: "融合料理",
+      rating: "4.5",
+      price: "約 2,500–4,500 銖",
+      hours: "晚餐為主（請再核對）",
       hours_uncertain: true,
-      note: "普吉福建麵的名字。此座標在喀圖帕普吉凱路，不在舊城步行範圍。賣完可能提早收。這趟不特意繞路，只在剛好經過時才去。",
-      lat: 7.910938,
-      lng: 98.3344,
-      places: [{ name: "Mee Ton Poe", url: gmaps("Mee Ton Poe Phuket Kathu") }],
-    },
+      need_reserve: true,
+      note: "Tri Vananda 的農場火烤與時令菜單，米其林精選／綠星常被提起。北島專程一晚的選擇；出發前再確認營業日。",
+      lat: 8.0455,
+      lng: 98.338,
+      places: [
+        { name: "Jampa", url: gmaps("Jampa Restaurant Tri Vananda Phuket") }
+      ],
+      image: "assets/places/food-farm.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "Thai Library（Trisara）",
+      region: "澄泰",
+      category: "南泰",
+      cuisine: "高級泰菜",
+      rating: "4.5",
+      price: "約 2,000–4,000 銖",
+      hours: "晚餐為主",
+      hours_uncertain: true,
+      need_reserve: true,
+      note: "Trisara 內的南泰精緻菜，日落海景。與 PRU 同度假村、風格不同：一邊是實驗菜單，一邊是經典南泰。須預約。",
+      lat: 8.0378,
+      lng: 98.2759,
+      places: [
+        { name: "Thai Library", url: gmaps("Thai Library Trisara Phuket") }
+      ],
+      image: "assets/places/food-fine.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "Dibba Restaurant",
+      region: "卡塔",
+      category: "泰菜",
+      cuisine: "泰式",
+      rating: "4.3",
+      price: "約 400–900 銖",
+      hours: "午餐至晚間",
+      hours_uncertain: true,
+      note: "卡塔一帶評價不錯的泰菜與海鮮，氣氛比街邊檔精緻一點。適合不想再開車、又想換口味的晚上。",
+      lat: 7.8178,
+      lng: 98.3005,
+      places: [
+        { name: "Dibba", url: gmaps("Dibba Restaurant Kata Phuket") }
+      ],
+      image: "assets/places/food-garden.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  }
   ],
   spas: [
+    {
+      name: "Trisara Spa",
+      region: "澄泰",
+      category: "度假村",
+      type_tag: "度假村",
+      rating: "4.8",
+      price: "高檔",
+      hours: "日間至傍晚（請預約）",
+      hours_uncertain: true,
+      need_reserve: true,
+      note: "Trisara 的私人水療，環境極安靜，療程偏長。外客名額有限，務必提前預約。由卡塔約一小時，適合當成北岸整天的核心。",
+      lat: 8.0375,
+      lng: 98.2762,
+      places: [
+        { name: "Trisara Spa", url: gmaps("Trisara Spa Phuket") }
+      ],
+      image: "assets/places/spa-luxury.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
       name: "Tew Son Spa（Katathani）",
       region: "卡塔諾伊",
@@ -615,24 +889,145 @@ const TRIP_DATA = {
       type_tag: "度假村",
       hours: "10:00–19:00",
       hours_source: "https://www.katathani.com/facilities/spa/",
-      note: "就在前三晚的酒店裡，面對卡塔諾伊。官網寫 10:00–19:00；另有目錄寫到更晚，以當天為準。週五若不想再坐車，選這裡。花園按摩、美甲與蒸房都有。",
+      note: "就在前三晚的酒店裡，面對卡塔諾伊。週五若不想再坐車，選這裡。花園按摩、美甲與蒸房都有。",
       lat: 7.807724,
       lng: 98.29932,
-      places: [{ name: "Tew Son Spa", url: gmaps("Tew Son Spa Katathani Phuket") }],
-      sources: [{ label: "官網", url: "https://www.katathani.com/facilities/spa/" }],
-    },
+      places: [
+        { name: "Tew Son Spa", url: gmaps("Tew Son Spa Katathani Phuket") }
+      ],
+      sources: [
+        { label: "官網", url: "https://www.katathani.com/facilities/spa/" }
+      ],
+      image: "assets/places/spa-resort.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "Anantara Spa Phuket",
+      region: "邁考",
+      category: "度假村",
+      type_tag: "度假村",
+      rating: "4.7",
+      hours: "日間（請預約）",
+      hours_uncertain: true,
+      need_reserve: true,
+      note: "Anantara Mai Khao 的高檔水療，海邊與花園環境。機場一帶，適合抵達後或離開前；由卡塔較遠，約一小時。",
+      lat: 8.1295,
+      lng: 98.3008,
+      places: [
+        { name: "Anantara Spa", url: gmaps("Anantara Spa Mai Khao Phuket") }
+      ],
+      image: "assets/places/spa-ocean.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "Banyan Tree Spa Phuket",
+      region: "邦濤",
+      category: "度假村",
+      type_tag: "度假村",
+      rating: "4.7",
+      hours: "日間至晚間（請預約）",
+      hours_uncertain: true,
+      need_reserve: true,
+      note: "Laguna 區的經典高級水療，雨滴式與泰式療程有名。北岸一天可搭配邦濤沙灘。外客需預約。",
+      lat: 8.0045,
+      lng: 98.2965,
+      places: [
+        { name: "Banyan Tree Spa", url: gmaps("Banyan Tree Spa Phuket Laguna") }
+      ],
+      image: "assets/places/spa-pool.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "Dewa Spa（The Slate）",
+      region: "邁楊",
+      category: "度假村",
+      type_tag: "度假村",
+      rating: "4.6",
+      hours: "日間（請預約）",
+      hours_uncertain: true,
+      need_reserve: true,
+      note: "The Slate 內的 Dewa Spa，工業與熱帶混搭氛圍。可與 Black Ginger 同一帶安排；機場附近較方便。",
+      lat: 8.0845,
+      lng: 98.2978,
+      places: [
+        { name: "Dewa Spa", url: gmaps("Dewa Spa The Slate Phuket") }
+      ],
+      image: "assets/places/spa-stone.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "Amanpuri Spa",
+      region: "潘西",
+      category: "度假村",
+      type_tag: "度假村",
+      rating: "4.9",
+      price: "頂級",
+      hours: "預約制",
+      need_reserve: true,
+      note: "島上最頂級的水療之一，環境極靜。名額與價格都高，外客通常需提前很久；這趟僅作參考清單。",
+      lat: 7.9995,
+      lng: 98.2788,
+      places: [
+        { name: "Amanpuri Spa", url: gmaps("Amanpuri Spa Phuket") }
+      ],
+      image: "assets/places/spa-villa.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "Andara Spa",
+      region: "卡瑪拉",
+      category: "度假村",
+      type_tag: "度假村",
+      rating: "4.6",
+      hours: "日間（請預約）",
+      hours_uncertain: true,
+      need_reserve: true,
+      note: "卡瑪拉山丘上的 Andara Resort 水療，視野開闊。由卡塔約 30–40 分，適合想換西岸中段空氣的半天。",
+      lat: 7.9528,
+      lng: 98.2835,
+      places: [
+        { name: "Andara Spa", url: gmaps("Andara Spa Phuket Kamala") }
+      ],
+      image: "assets/places/spa-ocean.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "Keemala Spa",
+      region: "卡瑪拉",
+      category: "度假村",
+      type_tag: "度假村",
+      rating: "4.7",
+      hours: "日間（請預約）",
+      hours_uncertain: true,
+      need_reserve: true,
+      note: "叢林裡的特色度假村水療，建築很特別。外客名額有限，建議提早；適合當成整天放空，不要趕行程。",
+      lat: 7.9585,
+      lng: 98.2912,
+      places: [
+        { name: "Keemala Spa", url: gmaps("Keemala Spa Phuket") }
+      ],
+      image: "assets/places/spa-jungle.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
       name: "Oasis Sky Breeze Spa",
       region: "卡隆",
       category: "山丘",
       type_tag: "山丘",
       hours: "10:00–22:00",
-      note: "Oasis 在卡隆山丘的一間，地址 26 Soi Plukjae。官網寫每日 10:00–22:00。由卡塔諾伊約 10 分鐘。預約中心約 08:30–21:30，建議至少提早兩小時。兩小時療程不要卡在關門前。",
+      need_reserve: true,
+      note: "Oasis 在卡隆山丘的一間，地址 26 Soi Plukjae。由卡塔諾伊約 10 分鐘。建議至少提早兩小時預約。",
       lat: 7.816115,
       lng: 98.313789,
-      places: [{ name: "Oasis Sky Breeze", url: gmaps("Oasis Sky Breeze Spa Karon") }],
-      sources: [{ label: "Oasis 布吉", url: "https://oasisspa.net/en/destination/phuket/" }],
-    },
+      places: [
+        { name: "Oasis Sky Breeze", url: gmaps("Oasis Sky Breeze Spa Karon") }
+      ],
+      sources: [
+        { label: "Oasis 布吉", url: "https://oasisspa.net/en/destination/phuket/" }
+      ],
+      image: "assets/places/spa-massage.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
       name: "Let's Relax Spa・The SIS Kata",
       region: "卡塔",
@@ -640,12 +1035,88 @@ const TRIP_DATA = {
       type_tag: "連鎖",
       rating: "4.5",
       hours: "10:00–23:30",
-      note: "在 The SIS Kata 裡，離卡塔市中心與卡塔諾伊都不遠。官網寫 10:00–23:30。分店頁註明該度假村客房歡迎 12 歲以上；外客做 SPA 請先向分店確認。電話 +66 76 609 555。",
+      note: "在 The SIS Kata 裡，離卡塔市中心與卡塔諾伊都不遠。官網寫 10:00–23:30。外客做 SPA 請先向分店確認。",
       lat: 7.812738,
       lng: 98.29999,
-      places: [{ name: "Let's Relax The SIS Kata", url: gmaps("Let's Relax Spa The SIS Kata") }],
-      sources: [{ label: "分店頁", url: "https://letsrelaxspa.com/branches/phuket-the-sis-kata/" }],
-    },
+      places: [
+        { name: "Let's Relax The SIS Kata", url: gmaps("Let's Relax Spa The SIS Kata") }
+      ],
+      sources: [
+        { label: "分店頁", url: "https://letsrelaxspa.com/branches/phuket-the-sis-kata/" }
+      ],
+      image: "assets/places/spa-thai.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "Ayara Spa",
+      region: "卡塔",
+      category: "度假村",
+      type_tag: "度假村",
+      rating: "4.5",
+      hours: "日間至晚間（請預約）",
+      hours_uncertain: true,
+      need_reserve: true,
+      note: "卡塔一帶的高檔水療選擇，療程完整、環境安靜。比 Let's Relax 更偏度假村風格；預約時確認是否接待外客。",
+      lat: 7.8205,
+      lng: 98.3012,
+      places: [
+        { name: "Ayara Spa", url: gmaps("Ayara Spa Kata Phuket") }
+      ],
+      image: "assets/places/spa-oil.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "JW Marriott Spa Mai Khao",
+      region: "邁考",
+      category: "度假村",
+      type_tag: "度假村",
+      rating: "4.6",
+      hours: "日間（請預約）",
+      hours_uncertain: true,
+      need_reserve: true,
+      note: "邁考長沙灘上的 JW 水療，空間大、適合長療程。機場走廊，適合離開日以外的專程半天。",
+      lat: 8.1485,
+      lng: 98.2975,
+      places: [
+        { name: "JW Marriott Spa", url: gmaps("JW Marriott Spa Mai Khao Phuket") }
+      ],
+      image: "assets/places/spa-garden.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "Six Senses Spa Yao Noi（離島）",
+      region: "瑤內島",
+      category: "離島",
+      type_tag: "離島",
+      rating: "4.9",
+      price: "頂級",
+      hours: "預約制；需船班",
+      need_reserve: true,
+      note: "極高級，但在攀牙灣瑤內島，當天來回會吃掉整天。這趟主節奏不排離島；僅列為夢想清單，不要硬塞進五日行程。",
+      lat: 8.12,
+      lng: 98.58,
+      places: [
+        { name: "Six Senses Yao Noi", url: gmaps("Six Senses Spa Yao Noi") }
+      ],
+      image: "assets/places/spa-luxury.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "The Spa at Katathani（延伸）",
+      region: "卡塔諾伊",
+      category: "度假村",
+      type_tag: "度假村",
+      hours: "與酒店設施相同時段",
+      hours_uncertain: true,
+      note: "若 Tew Son 檔期滿，可向酒店詢問同度假村其他療程或美甲。仍以住客優先；出發前一日再確認。",
+      lat: 7.808,
+      lng: 98.2995,
+      places: [
+        { name: "Katathani Spa", url: gmaps("Katathani Phuket Beach Resort Spa") }
+      ],
+      image: "assets/places/spa-candle.jpg",
+      image_credit: "Unsplash（氣氛參考）",
+  }
   ],
   beaches: [
     {
@@ -654,55 +1125,75 @@ const TRIP_DATA = {
       category: "主沙灘",
       type_tag: "主行程",
       hours: "全日；下水看旗",
-      note: "這趟的海灘。海灣短、酒店多、比芭東安靜。五月仍可能有湧浪，紅旗日改泳池。酒店就在沙上。",
+      note: "這趟的海灘。海灣短、酒店多、比芭東安靜。五月仍可能有湧浪，紅旗日改泳池。",
       lat: 7.806338,
       lng: 98.298738,
-      places: [{ name: "卡塔諾伊", url: gmaps("Kata Noi Beach") }],
-    },
+      image: "assets/places/beach-katanoi.jpg",
+      places: [
+        { name: "卡塔諾伊", url: gmaps("Kata Noi Beach") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
       name: "卡塔海灘 Kata",
       region: "卡塔",
       category: "主沙灘",
       type_tag: "主行程",
       hours: "全日；下水看旗",
-      note: "卡塔諾伊北鄰，約一公里半的沙灘，南端有公園與餐廳。The Boathouse 在這裡。由酒店過去很近。",
+      note: "卡塔諾伊北鄰，約一公里半的沙灘，南端有公園與餐廳。The Boathouse 在這裡。",
       lat: 7.81936,
       lng: 98.29805,
-      places: [{ name: "卡塔海灘", url: gmaps("Kata Beach Phuket") }],
-    },
+      image: "assets/places/beach-kata.jpg",
+      places: [
+        { name: "卡塔海灘", url: gmaps("Kata Beach Phuket") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
       name: "卡隆海灘 Karon",
       region: "卡隆",
       category: "可順路",
       type_tag: "主行程",
       hours: "全日；下水看旗",
-      note: "再往北的長沙灘，空間比卡塔開闊。On The Rock 在這一段的懸崖上。適合週五下午散步，不值得為它搬酒店。",
+      note: "再往北的長沙灘，空間比卡塔開闊。On The Rock 在這一段的懸崖上。適合散步，不值得為它搬酒店。",
       lat: 7.843958,
       lng: 98.293425,
-      places: [{ name: "卡隆海灘", url: gmaps("Karon Beach") }],
-    },
+      image: "assets/places/beach-karon.jpg",
+      places: [
+        { name: "卡隆海灘", url: gmaps("Karon Beach") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
       name: "拉威海角 Promthep Cape",
       region: "拉威",
       category: "觀景",
       type_tag: "主行程",
       hours: "全日；日落約 18:30",
-      note: "島的南端觀景台，不是游泳處。週四傍晚的唯一景點。人多，提早到；看完晚霞再離開。souvenir 攤可逛可不逛。",
+      note: "島的南端觀景台，不是游泳處。週四傍晚的唯一景點。人多，提早到。",
       lat: 7.761892,
       lng: 98.305358,
-      places: [{ name: "拉威海角", url: gmaps("Promthep Cape") }],
-    },
+      image: "assets/places/beach-promthep.jpg",
+      places: [
+        { name: "拉威海角", url: gmaps("Promthep Cape") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
       name: "奈漢海灘 Nai Harn",
       region: "拉威",
       category: "備選",
       type_tag: "備選",
       hours: "全日；下水看旗",
-      note: "南端較受地形保護的沙灘，樹蔭多。若卡塔連續紅旗，又還想下水，這是第一個備選。由舊城約 30–40 分，只作週日可選，不排進主行程。",
+      note: "南端較受地形保護的沙灘，樹蔭多。若卡塔連續紅旗，又還想下水，這是第一個備選。",
       lat: 7.775707,
       lng: 98.305825,
-      places: [{ name: "奈漢", url: gmaps("Nai Harn Beach") }],
-    },
+      image: "assets/places/beach-naiharn.jpg",
+      places: [
+        { name: "奈漢海灘", url: gmaps("Nai Harn Beach") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
       name: "亞努伊 Ya Nui",
       region: "拉威",
@@ -712,8 +1203,12 @@ const TRIP_DATA = {
       note: "拉威海角旁的小海灣，水清時很漂亮，灣小，容易滿。和奈漢二選一即可。",
       lat: 7.767622,
       lng: 98.306166,
-      places: [{ name: "亞努伊", url: gmaps("Ya Nui Beach Phuket") }],
-    },
+      image: "assets/places/beach-yanui.jpg",
+      places: [
+        { name: "亞努伊", url: gmaps("Ya Nui Beach Phuket") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
       name: "自由沙灘 Freedom Beach",
       region: "芭東",
@@ -721,25 +1216,137 @@ const TRIP_DATA = {
       type_tag: "備選",
       rating: "4.4",
       hours: "日間；船班看海況",
-      note: "芭東以南的小灣，沒有馬路直達。長尾船多由芭東南端 Tri Trang 出發，備現金，價格當日面議。五月浪大就不要去。這趟不排，避免為了一個沙灘跨去芭東再趕船。",
+      note: "芭東以南的小灣，沒有馬路直達。長尾船多由 Tri Trang 出發。五月浪大就不要去。",
       lat: 7.875205,
       lng: 98.275581,
+      image: "assets/places/beach-freedom.jpg",
       places: [
-        { name: "自由沙灘", url: gmaps("Freedom Beach Phuket") },
-        { name: "Tri Trang", url: gmaps("Tri Trang Beach Patong") },
+        { name: "自由沙灘", url: gmaps("Freedom Beach Phuket") }
       ],
-    },
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
       name: "芭東海灘 Patong",
       region: "芭東",
       category: "參考",
       type_tag: "參考",
       hours: "全日；夜生活另計",
-      note: "最熱鬧的西岸沙灘。這趟不住、也不安排夜店。五月同樣常有紅旗。只在你臨時想看熱鬧時才來，吃完就回卡塔或舊城。",
+      note: "最熱鬧的西岸沙灘。這趟不住、也不安排夜店。五月同樣常有紅旗。",
       lat: 7.896632,
       lng: 98.295429,
-      places: [{ name: "芭東海灘", url: gmaps("Patong Beach") }],
-    },
+      image: "assets/places/beach-patong.jpg",
+      places: [
+        { name: "芭東海灘", url: gmaps("Patong Beach") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "蘇林海灘 Surin",
+      region: "蘇林",
+      category: "北岸",
+      type_tag: "備選",
+      rating: "4.5",
+      hours: "全日；下水看旗",
+      note: "西岸中北段較安靜的沙灘，水質常被誇。由卡塔約 35–45 分。適合想換一邊海的下午，不排正日。",
+      lat: 7.9765,
+      lng: 98.2788,
+      image: "assets/places/beach-surin.jpg",
+      places: [
+        { name: "蘇林海灘", url: gmaps("Surin Beach Phuket") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "邦濤海灘 Bang Tao",
+      region: "邦濤",
+      category: "北岸",
+      type_tag: "備選",
+      rating: "4.4",
+      hours: "全日；下水看旗",
+      note: "長沙灘，Laguna 與多間度假村在此。Catch Beach Club 一帶可吃可躺。北岸一天的核心沙灘。",
+      lat: 7.9928,
+      lng: 98.2815,
+      image: "assets/places/beach-bangtao.jpg",
+      places: [
+        { name: "邦濤海灘", url: gmaps("Bang Tao Beach Phuket") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "卡瑪拉海灘 Kamala",
+      region: "卡瑪拉",
+      category: "西岸",
+      type_tag: "備選",
+      hours: "全日；下水看旗",
+      note: "芭東與蘇林之間的海灣，比芭東安靜。Andara、Keemala 在山丘上。可順路停留，不必過夜。",
+      lat: 7.9555,
+      lng: 98.283,
+      image: "assets/places/beach-kamala.jpg",
+      places: [
+        { name: "卡瑪拉海灘", url: gmaps("Kamala Beach Phuket") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "拉揚海灘 Layan",
+      region: "拉揚",
+      category: "北岸",
+      type_tag: "備選",
+      hours: "全日；較安靜",
+      note: "邦濤北端更安靜的一段，常有人慢跑與看日落。設施較少，適合不想碰 beach club 的人。",
+      lat: 8.0105,
+      lng: 98.2855,
+      image: "assets/places/beach-layan.jpg",
+      places: [
+        { name: "拉揚海灘", url: gmaps("Layan Beach Phuket") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "邁考海灘 Mai Khao",
+      region: "邁考",
+      category: "機場帶",
+      type_tag: "參考",
+      hours: "全日；長而空曠",
+      note: "島最北的長沙灘，靠近機場與國家公園。五月海況不一；適合喜歡空曠、不住南岸的人。這趟不排。",
+      lat: 8.147,
+      lng: 98.298,
+      image: "assets/places/beach-maikhao.jpg",
+      places: [
+        { name: "邁考海灘", url: gmaps("Mai Khao Beach Phuket") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "邁楊海灘 Nai Yang",
+      region: "邁楊",
+      category: "機場帶",
+      type_tag: "參考",
+      hours: "全日；國家公園範圍",
+      note: "機場旁國家公園內的沙灘，The Slate 附近。落地或離開前後若還有精神，可比芭東舒服。",
+      lat: 8.0885,
+      lng: 98.2945,
+      image: "assets/places/beach-naiyang.jpg",
+      places: [
+        { name: "邁楊海灘", url: gmaps("Nai Yang Beach Phuket") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "Tri Trang 海灘",
+      region: "芭東",
+      category: "出發點",
+      type_tag: "備選",
+      hours: "日間",
+      note: "芭東南端小灣，多為去自由沙灘的長尾船起點。本身也可散步；五月船班看海況。",
+      lat: 7.8865,
+      lng: 98.272,
+      image: "assets/places/beach-tritrang.jpg",
+      places: [
+        { name: "Tri", url: gmaps("Tri Trang Beach Patong") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  }
   ],
   markets: [
     {
@@ -750,50 +1357,130 @@ const TRIP_DATA = {
       rating: "4.4",
       hours: "六、日約 16:00–22:00",
       hours_uncertain: true,
-      note: "島上最大的週末市集，在維集 Wirat Hong Yok 路，中央 Festival 附近。衣服、雜貨與熟食為主，當週六的晚餐。官網有的頁寫到 22:00，有的寫到 23:00；平日只有熟食，不是這趟要的大市集。由舊城 Grab 約 10–15 分。",
+      note: "島上最大的週末市集，衣服、雜貨與熟食為主，當週六的晚餐。由舊城 Grab 約 10–15 分。",
       lat: 7.880533,
       lng: 98.366326,
-      places: [{ name: "那卡週末市集", url: gmaps("Naka Weekend Market Phuket") }],
-      sources: [{ label: "市集網站", url: "https://www.phuketnakamarket.com/" }],
-    },
+      image: "assets/places/market-night.jpg",
+      sources: [
+        { label: "市集網站", url: "https://www.phuketnakamarket.com/" }
+      ],
+      places: [
+        { name: "那卡週末市集", url: gmaps("Naka Weekend Market Phuket") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
-      name: "塔廊路週日行人街",
+      name: "塔廊路週日行人街 Lard Yai",
       region: "普吉舊城",
       category: "週日晚",
       type_tag: "主行程",
       hours: "星期日約 16:00–22:00",
       hours_uncertain: true,
-      note: "每週日塔廊路封街，本地人叫 Lard Yai 行人街。手工、小吃、畫像都有，氣氛比那卡細。酒店在攀牙路，走路幾分鐘。週一要早起，約 19:30 回房。",
+      note: "每週日塔廊路封街。手工、小吃、畫像都有，氣氛比那卡細。酒店走路幾分鐘。",
       lat: 7.88485,
       lng: 98.3884,
-      places: [{ name: "塔廊路", url: gmaps("Thalang Road Sunday Walking Street Phuket Old Town") }],
-    },
+      image: "assets/places/market-walking.jpg",
+      places: [
+        { name: "塔廊路週日行人街", url: gmaps("Thalang Road Sunday Walking Street Phuket Old Town") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
       name: "舊城日間步行",
       region: "普吉舊城",
       category: "日間",
       type_tag: "主行程",
       hours: "全日可走",
-      note: "羅曼尼巷、迪布路、攀牙路與惹蘭路的中葡街屋，不必等週末。週六入住後先走這一圈，再決定晚上去那卡還是留下吃 Raya。",
+      note: "羅曼尼巷、迪布路、攀牙路與惹蘭路的中葡街屋，不必等週末。",
       lat: 7.8846,
       lng: 98.3887,
+      image: "assets/places/market-oldtown.jpg",
       places: [
-        { name: "羅曼尼巷", url: gmaps("Soi Romanee Phuket") },
-        { name: "迪布路", url: gmaps("Dibuk Road Phuket Old Town") },
+        { name: "舊城日間步行", url: gmaps("Soi Romanee Phuket") }
       ],
-    },
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
-      name: "泰國華博物館",
-      region: "普吉舊城",
-      category: "日間",
-      type_tag: "主行程",
-      hours: "日間",
+      name: "Chillva Market",
+      region: "普吉鎮",
+      category: "週末",
+      type_tag: "備選",
+      rating: "4.3",
+      hours: "週末傍晚至夜間（請再核對）",
       hours_uncertain: true,
-      note: "由舊泰華學校改成的博物館，講普吉華人與錫礦歷史。週六若還開就進去躲一下午後的太陽；時間對不上就只在門外看建築。",
-      lat: 7.8853,
-      lng: 98.3874,
-      places: [{ name: "泰國華博物館", url: gmaps("Phuket Thai Hua Museum") }],
-    },
+      note: "較有設計感的週末市集，文創與小吃並重。與那卡擇一即可，不要同一晚兩邊趕。",
+      lat: 7.8895,
+      lng: 98.385,
+      image: "assets/places/market-chill.jpg",
+      places: [
+        { name: "Chillva", url: gmaps("Chillva Market Phuket") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "Phuket Weekend Market（Indy）",
+      region: "維集",
+      category: "週末",
+      type_tag: "備選",
+      hours: "週末傍晚（請再核對）",
+      hours_uncertain: true,
+      note: "本地人也叫 Phuket Indy，規模比那卡小、熟食不少。若那卡太擠，可改來這裡逛一圈。",
+      lat: 7.8755,
+      lng: 98.3785,
+      image: "assets/places/market-indy.jpg",
+      places: [
+        { name: "Phuket", url: gmaps("Phuket Weekend Market Indy") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "邦濤夜市 Bangtao Night Market",
+      region: "邦濤",
+      category: "夜市",
+      type_tag: "備選",
+      hours: "部分晚間（請再核對）",
+      hours_uncertain: true,
+      note: "北岸度假區附近的夜市／小吃攤，規模不大。若白天在邦濤，傍晚可順路。",
+      lat: 7.9985,
+      lng: 98.2955,
+      image: "assets/places/market-food.jpg",
+      places: [
+        { name: "邦濤夜市", url: gmaps("Bangtao Night Market Phuket") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "卡塔夜市 Kata Night Market",
+      region: "卡塔",
+      category: "夜市",
+      type_tag: "備選",
+      hours: "部分晚間（請再核對）",
+      hours_uncertain: true,
+      note: "卡塔主路一帶的小夜市與攤位，方便住南岸時走路逛。不要期待那卡那種規模。",
+      lat: 7.8215,
+      lng: 98.3018,
+      image: "assets/places/market-street.jpg",
+      places: [
+        { name: "卡塔夜市", url: gmaps("Kata Night Market Phuket") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
+    {
+      name: "拉威海鮮市場 Rawai",
+      region: "拉威",
+      category: "海鮮",
+      type_tag: "備選",
+      hours: "日間至傍晚",
+      hours_uncertain: true,
+      note: "拉威碼頭的海鮮攤，可點海鮮請鄰近餐廳代煮。看完海角後若還想吃碼頭風味可停；注意議價與新鮮度。",
+      lat: 7.7795,
+      lng: 98.3215,
+      image: "assets/places/market-seafood.jpg",
+      places: [
+        { name: "拉威海鮮市場", url: gmaps("Rawai Seafood Market Phuket") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
       name: "Banzaan 生鮮市場",
       region: "芭東",
@@ -804,8 +1491,12 @@ const TRIP_DATA = {
       note: "芭東的室內生鮮市場，看海鮮與熟食可以，但這趟不住芭東，不特意去。",
       lat: 7.891286,
       lng: 98.301741,
-      places: [{ name: "Banzaan", url: gmaps("Banzaan Fresh Market Patong") }],
-    },
+      image: "assets/places/market-fresh.jpg",
+      places: [
+        { name: "Banzaan", url: gmaps("Banzaan Fresh Market Patong") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
       name: "Malin Plaza 夜市",
       region: "芭東",
@@ -816,104 +1507,82 @@ const TRIP_DATA = {
       note: "芭東每晚都有的市集之一。那卡與塔廊路已經覆蓋週末，不必再加一晚芭東。",
       lat: 7.8822,
       lng: 98.292589,
-      places: [{ name: "Malin Plaza", url: gmaps("Malin Plaza Night Market Patong") }],
-    },
-  ],
-  transport: [
-    {
-      name: "布吉國際機場・國際線",
-      region: "機場",
-      category: "航班",
-      hours: "航廈全日",
-      note: "UO724 於 5 月 19 日 10:30 抵達，UO725 於 5 月 24 日 11:15 離開，都使用國際線航廈。出口跟現場指示，不要接受主動拉客。",
-      lat: 8.105882,
-      lng: 98.305702,
-      places: [{ name: "布吉國際機場", url: gmaps("Phuket International Airport") }],
-      sources: [{ label: "香港快運", url: "https://www.hkexpress.com/" }],
-    },
-    {
-      name: "抵達日：機場 → 卡塔諾伊",
-      region: "機場",
-      category: "接機",
-      hours: "落地後",
-      note: "Grab 或機場櫃台一口價計程車。車程約 60–80 分，Grab 常見約 900–1,200 銖，雨天會變。上車點以 App 與指示牌為準，近年多在國際與國內航廈之間，不要靠過時的閘口號碼。機場巴士較便宜，但行李與轉車不適合落地第一天。",
-      lat: 8.105882,
-      lng: 98.305702,
+      image: "assets/places/market-plaza.jpg",
       places: [
-        { name: "機場", url: gmaps("Phuket International Airport") },
-        { name: "Katathani", url: gmaps("Katathani Phuket Beach Resort") },
+        { name: "Malin", url: gmaps("Malin Plaza Night Market Patong") }
       ],
-    },
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
-      name: "島上日常：Grab／Bolt",
-      region: "全島",
-      category: "日常",
-      note: "沙灘、舊城、市集之間都用叫車。卡塔一帶日間通常叫得到；深夜與暴雨要多等。價格以下單畫面為準。嘟嘟車先講好價錢，往往比 App 貴。這趟不租機車：雨季路面滑，意外時保險也麻煩。",
-    },
-    {
-      name: "週六：卡塔 → 大佛 → 舊城",
-      region: "卡塔諾伊",
-      category: "換酒店",
-      note: "退房後一程車，可請司機在大佛等 30–40 分再繼續，或分成兩段 Grab。直達舊城約 35–50 分。行李放後車廂，人不需要再搬第二次，直到週一。",
-      lat: 7.827521,
-      lng: 98.312445,
+      name: "Boat Avenue Night Market",
+      region: "澄泰",
+      category: "北岸",
+      type_tag: "備選",
+      hours: "部分晚間（請再核對）",
+      hours_uncertain: true,
+      note: "澄泰 Boat Avenue 一帶的夜間攤位與餐廳區，偏度假客。北岸吃完飯可散步，不是傳統大市集。",
+      lat: 7.9895,
+      lng: 98.3048,
+      image: "assets/places/market-lantern.jpg",
       places: [
-        { name: "大佛", url: gmaps("Big Buddha Phuket") },
-        { name: "The Memory", url: gmaps("The Memory at On On Hotel") },
+        { name: "Boat", url: gmaps("Boat Avenue Phuket Night Market") }
       ],
-    },
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
-      name: "舊城 ↔ 那卡市集",
-      region: "普吉舊城",
-      category: "市集",
-      note: "週六傍晚約 10–15 分，Grab 約 120–200 銖。回程在市集門口叫車即可，不要走到大路中央攔車。",
-      lat: 7.880533,
-      lng: 98.366326,
-      places: [{ name: "那卡市集", url: gmaps("Naka Weekend Market") }],
-    },
-    {
-      name: "舊城步行",
-      region: "普吉舊城",
-      category: "步行",
-      note: "週日行人街、Raya、Tu Kab Khao、羅曼尼巷都不需要車。中午太陽大，走陰影側，或回酒店再開冷氣。",
-      lat: 7.883809,
-      lng: 98.388544,
-      places: [{ name: "The Memory", url: gmaps("The Memory at On On Hotel Phuket") }],
-    },
-    {
-      name: "離開日：舊城 → 機場",
-      region: "普吉舊城",
-      category: "送機",
-      hours: "07:15 出門",
-      note: "目標 08:15–08:45 到國際線航廈。車程約 40–70 分，車費約 600–900 銖。週日晚請酒店代叫，比週一早上臨時等司機穩。若改回卡塔出發，提早到約 06:15–06:30。",
-      lat: 7.883809,
-      lng: 98.388544,
+      name: "Laguna Night Market",
+      region: "邦濤",
+      category: "北岸",
+      type_tag: "備選",
+      hours: "部分週次晚間（請再核對）",
+      hours_uncertain: true,
+      note: "Laguna 度假區內不定期／週末夜市，氣氛輕鬆。出發前查當週是否有開。",
+      lat: 8.0005,
+      lng: 98.3005,
+      image: "assets/places/market-craft.jpg",
       places: [
-        { name: "舊城酒店", url: gmaps("The Memory at On On Hotel") },
-        { name: "機場", url: gmaps("Phuket International Airport") },
+        { name: "Laguna", url: gmaps("Laguna Phuket Night Market") }
       ],
-    },
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
-      name: "自由沙灘的船（不排入正日）",
-      region: "芭東",
-      category: "可選",
-      note: "只在海況平靜時才考慮。長尾船由芭東 Tri Trang 一帶出發，備現金，當日講價。回程預留等船的時間。五月不值得為了這一程打亂節奏。",
-      lat: 7.886468,
-      lng: 98.272022,
-      places: [{ name: "Tri Trang", url: gmaps("Tri Trang Beach longtail Freedom Beach") }],
-    },
+      name: "舊城週末市集（參考）",
+      region: "普吉舊城",
+      category: "週末",
+      type_tag: "參考",
+      hours: "視當週活動",
+      hours_uncertain: true,
+      note: "舊城偶有臨時市集或藝術市集，多集中在週末。以現場與當週海報為準；主力仍是塔廊路行人街。",
+      lat: 7.885,
+      lng: 98.389,
+      image: "assets/places/market-oldtown.jpg",
+      places: [
+        { name: "舊城週末市集（參考）", url: gmaps("Phuket Old Town weekend market") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  },
     {
-      name: "不安排的船",
-      region: "全島",
-      category: "不做",
-      note: "皮皮島、珊瑚島、攀牙灣都是整天的船。5 月 23 日晚上還要早睡，任何離島都會撞上週一的 11:15 航班。這次用拉威海角代替「必須坐船才算看過海」。",
-    },
+      name: "泰國華博物館（日間）",
+      region: "普吉舊城",
+      category: "日間",
+      type_tag: "主行程",
+      hours: "日間",
+      hours_uncertain: true,
+      note: "由舊泰華學校改成的博物館，講普吉華人與錫礦歷史。週六午後可進去躲太陽。",
+      lat: 7.8853,
+      lng: 98.3874,
+      image: "assets/places/market-oldtown.jpg",
+      places: [
+        { name: "泰國華博物館（日間）", url: gmaps("Phuket Thai Hua Museum") }
+      ],
+      image_credit: "Unsplash（氣氛參考）",
+  }
   ],
 };
 
 const STORAGE_KEY = "phuket-trip-2027-day";
 const WEATHER_CACHE_KEY = "phuket-trip-weather-v1";
-const VIEWS = ["home", "itinerary", "hotels", "restaurants", "spas", "beaches", "markets", "transport"];
+const VIEWS = ["home", "itinerary", "hotels", "restaurants", "spas", "beaches", "markets"];
 
 const REGION_ORDER = [
   "卡塔諾伊",
@@ -921,18 +1590,29 @@ const REGION_ORDER = [
   "卡隆",
   "拉威",
   "芭東",
+  "卡瑪拉",
+  "蘇林",
+  "邦濤",
+  "拉揚",
+  "澄泰",
+  "潘西",
   "查龍",
   "普吉舊城",
+  "普吉鎮",
   "維集",
+  "塔朗",
+  "邁楊",
+  "邁考",
+  "瑤內島",
   "喀圖",
   "機場",
   "全島",
 ];
 
-const CUISINE_ORDER = ["泰式海鮮", "普吉本地菜", "泰式", "早午餐", "其他"];
-const SPA_TYPE_ORDER = ["度假村", "山丘", "連鎖"];
+const CUISINE_ORDER = ["高級泰菜", "泰式海鮮", "普吉本地菜", "融合料理", "義式", "西式", "泰式", "早午餐", "其他"];
+const SPA_TYPE_ORDER = ["度假村", "山丘", "連鎖", "離島"];
 const BEACH_TYPE_ORDER = ["主行程", "備選", "參考"];
-const MARKET_TYPE_ORDER = ["主行程", "參考"];
+const MARKET_TYPE_ORDER = ["主行程", "備選", "參考"];
 
 const CAT = {
   flight: { icon: "✈️", label: "航班" },
@@ -974,7 +1654,6 @@ const MAP_COLORS = {
   spas: "#b85c8a",
   beaches: "#2a8fbf",
   markets: "#c4892a",
-  transport: "#3d5a80",
 };
 
 const PHUKET_CENTER = [7.89, 98.35];
@@ -1093,7 +1772,7 @@ function init() {
     "food",
     "🍽️ 餐廳",
     "餐廳",
-    "海灘幾天以海鮮和輕鬆泰菜為主，舊城幾天吃普吉本地菜。評分是公開地圖的彙整，會變動。標了「時段請再核對」的，出發前再看一次。"
+    "收錄高級餐廳與在地好味，方便挑想去的店；暫時不硬塞進每日行程。評分與營業時間會變動，標了「時段請再核對」的，出發前再看一次。圖片多為氣氛參考，非店家官方照片。"
   );
   renderSpotList(
     "view-spas",
@@ -1101,7 +1780,7 @@ function init() {
     "spa",
     "💆 SPA",
     "SPA",
-    "週五上午留 90–120 分鐘。想零交通就用酒店的 Tew Son；想換空氣就去山丘上的 Oasis，或卡塔的 Let's Relax。建議前一日預約。"
+    "列出島上高檔與方便的水療供參考，暫時不全部排進正日。想零移動就用酒店的 Tew Son；想換空氣可看北岸度假村或卡隆山丘。務必提前預約。圖片為氣氛參考。"
   );
   renderSpotList(
     "view-beaches",
@@ -1109,7 +1788,7 @@ function init() {
     "beach",
     "🏖️ 海灘",
     "海灘",
-    "主行程是卡塔諾伊、卡塔、卡隆，加上拉威海角的日落。奈漢、亞努伊與自由沙灘是浪況允許時的備選。五月西岸常有紅旗。"
+    "主行程仍是卡塔諾伊、卡塔、卡隆與拉威海角；其餘西岸與北岸沙灘作參考，暫不塞進每日行程。五月西岸常有紅旗，下水只看旗號。"
   );
   renderSpotList(
     "view-markets",
@@ -1117,15 +1796,7 @@ function init() {
     "market",
     "🏮 市集",
     "市集",
-    "週六晚去那卡，週日晚留在塔廊路。舊城街屋白天隨時可走。芭東的市集只作參考，這趟不特意過去。"
-  );
-  renderSpotList(
-    "view-transport",
-    "transport",
-    "transport",
-    "🚗 交通",
-    "交通",
-    "落地與離開用專車或 Grab。島上也不租車。船只保留自由沙灘作為可選，離島一日遊不排。車費都是大約數字，以下單時的 App 為準。"
+    "週末主力仍是那卡與塔廊路行人街；其餘市集作備選與參考，暫不全部排進正日。出發前再核對營業日。"
   );
   bindLightbox();
   loadWeather();
@@ -1387,10 +2058,34 @@ function spotTypeValue(s, listKey) {
   return "";
 }
 
+function renderSpotMedia(s, listKey) {
+  const isFood = listKey === "restaurants";
+  const imgs = [];
+  if (isFood && s.food_image) {
+    imgs.push({ src: s.food_image, alt: `${s.name} 食物` });
+  }
+  if (s.image) {
+    imgs.push({ src: s.image, alt: `${s.name}` });
+  }
+  if (!imgs.length) return "";
+  const credit = s.image_credit
+    ? `<div class="spot-credit">${escapeHtml(s.image_credit)}</div>`
+    : "";
+  const media = imgs
+    .map(
+      (im) =>
+        `<button type="button" class="gallery-thumb spot-thumb" data-src="${escapeHtml(im.src)}" aria-label="放大 ${escapeHtml(im.alt)}"><img loading="lazy" src="${escapeHtml(im.src)}" alt="${escapeHtml(im.alt)}" /></button>`
+    )
+    .join("");
+  return `<div class="spot-media">${media}${credit}</div>`;
+}
+
 function spotCardHtml(s, listKey, cardClass, defaultBadge) {
   const meta = [];
   if (s.rating) meta.push(`<span class="chip">★ ${escapeHtml(s.rating)}</span>`);
   if (s.price) meta.push(`<span class="chip">${escapeHtml(s.price)}</span>`);
+  const media = renderSpotMedia(s, listKey);
+  const hasMedia = media ? " has-media" : "";
   const typeVal = spotTypeValue(s, listKey);
   const typeAttr = typeVal ? ` data-type-filter="${escapeHtml(typeVal)}"` : "";
   const sources =
@@ -1398,7 +2093,7 @@ function spotCardHtml(s, listKey, cardClass, defaultBadge) {
       ? `<div class="source-block"><div class="source-label">參考</div><div class="spot-actions sources">${sourceButtonsHtml(s.sources)}</div></div>`
       : "";
   return `
-    <article class="spot-card ${cardClass}" data-name="${escapeHtml(s.name)}" data-region="${escapeHtml(s.region || "其他")}"${typeAttr}>
+    <article class="spot-card ${cardClass}${hasMedia}" data-name="${escapeHtml(s.name)}" data-region="${escapeHtml(s.region || "其他")}"${typeAttr}>
       <div class="spot-body">
         <div class="spot-badge">${escapeHtml(s.category || defaultBadge)}</div>
         <h3>${escapeHtml(s.name)}</h3>
@@ -1408,6 +2103,7 @@ function spotCardHtml(s, listKey, cardClass, defaultBadge) {
         <div class="spot-actions">${placeButtonsHtml(s.places)}</div>
         ${sources}
       </div>
+      ${media}
     </article>`;
 }
 
@@ -1728,6 +2424,9 @@ function renderSpotList(viewId, listKey, cardClass, heroTitle, defaultBadge, sub
   `;
   bindSpotFilterRow(el, viewId, ".region-filter:not(.type-filter)");
   bindSpotFilterRow(el, viewId, ".type-filter");
+  el.querySelectorAll(".gallery-thumb").forEach((btn) => {
+    btn.addEventListener("click", () => openLightbox(btn.dataset.src));
+  });
   initSpotMap(viewId, listKey, spots);
 }
 
