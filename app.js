@@ -59,7 +59,7 @@ const TRIP_DATA = {
     "西岸（芭東、卡隆、卡塔）此季常有大浪。下水只看海灘旗：紅旗不要游。卡塔諾伊與奈漢相對較受岬角保護，但仍以當日旗號為準。",
     "香港是英式三腳插，泰國多用兩腳扁插或圓插。電壓同為約 220V，帶一個轉接頭即可。",
     "市集、長尾船與部分小店收現金。酒店與較大餐廳一般可刷卡。Grab 用 App 付款最省事。",
-    "大佛與寺院要遮肩蓋膝。機場不要跟主動拉客的人走，上車點以指示牌與 App 為準。",
+    "寺院要遮肩蓋膝。機場不要跟主動拉客的人走，上車點以指示牌與 App 為準。",
     "行李額、櫃檯截止與餐飲以香港快運 App 當日顯示為準。國際線常見於起飛前約 60 分鐘停止接受行李，這趟按提早到機場來排，不卡在截止線上。",
   ],
   overview: [
@@ -68,7 +68,6 @@ const TRIP_DATA = {
     { name: "Hotel Indigo Phuket Patong", lat: 7.8993, lng: 98.2999, places: [{ name: "Hotel Indigo", url: gmaps("Hotel Indigo Phuket Patong") }] },
     { name: "Simon Cabaret", lat: 7.8788, lng: 98.2921, places: [{ name: "Simon Cabaret", url: gmaps("Simon Cabaret Phuket") }] },
     { name: "拉威海角", lat: 7.761892, lng: 98.305358, places: [{ name: "拉威海角", url: gmaps("Promthep Cape") }] },
-    { name: "普吉大佛", lat: 7.827521, lng: 98.312445, places: [{ name: "大佛", url: gmaps("Big Buddha Phuket") }] },
     { name: "那卡週末市集", lat: 7.880533, lng: 98.366326, places: [{ name: "那卡市集", url: gmaps("Naka Weekend Market Phuket") }] },
   ],
   days: [
@@ -287,21 +286,14 @@ const TRIP_DATA = {
           time: "1100-1230",
           cat: "food",
           title: "卡塔午餐",
-          notes: ["吃完再上路。不要空肚子換酒店或去大佛。"],
+          notes: ["吃完再上路。不要空肚子換酒店。"],
           places: [{ name: "The Boathouse", url: gmaps("The Boathouse Phuket Kata Beach") }],
         },
         {
-          time: "1230-1400",
-          cat: "sight",
-          title: "順路：普吉大佛（可選）",
-          notes: ["出發：卡塔約 12:30\n到達：大佛約 12:50\n車程：約 15–20 分\n車費：Grab 約 200–350 銖\n建議離開：約 13:40–14:00，參觀 30–40 分夠了\n免費入內（可隨喜）。肩膀與膝蓋要遮好。若午後大雨、隊伍很長，或想直接換酒店休息，可略過，由卡塔直奔芭東。"],
-          places: [{ name: "普吉大佛", url: gmaps("Big Buddha Phuket") }],
-        },
-        {
-          time: "1400-1530",
+          time: "1300-1430",
           cat: "hotel",
           title: "入住 Hotel Indigo Phuket Patong（芭東英迪格）",
-          notes: ["出發：大佛（或卡塔直達）\n到達：Rat U Thit 200 Pee 路 124 號，芭東\n車程：自大佛約 25–40 分；自卡塔約 20–35 分\n車費：Grab 約 250–450 銖（以當日為準）\nIHG 精品酒店，有泳池，步行約可到芭東海灘。放下行李，先休息或下泳池，不必立刻再出門趕場。\n電話 +66 76 609 999。"],
+          notes: ["出發：卡塔／Katathani\n到達：Rat U Thit 200 Pee 路 124 號，芭東\n車程：約 20–35 分\n車費：Grab 約 250–450 銖（以當日為準）\nIHG 精品酒店，有泳池，步行約可到芭東海灘。放下行李，先休息或下泳池，不必立刻再出門趕場。\n電話 +66 76 609 999。"],
           places: [{ name: "Hotel Indigo Phuket Patong", url: gmaps("Hotel Indigo Phuket Patong") }],
           links: [
             "https://phuketpatong.hotelindigo.com/",
@@ -309,7 +301,7 @@ const TRIP_DATA = {
           ],
         },
         {
-          time: "1530-1730",
+          time: "1430-1730",
           cat: "buffer",
           title: "泳池／芭東海灘輕鬆",
           notes: ["這段留給休息。五月西岸常有大浪，下水只看海灘旗；紅旗就改用酒店泳池。\n舊城與那卡市集今晚不趕，改到明天白天可選。"],
@@ -2001,7 +1993,7 @@ function renderHome() {
     <h3 class="section-title">這趟的範圍</h3>
     <div class="spot-map-wrap">
       <div class="spot-map" id="view-home-map" role="img" aria-label="行程範圍地圖"></div>
-      <p class="spot-map-hint">機場、兩間酒店、拉威海角、大佛與那卡市集。右上角 ◎ 可開 GPS；人在香港時地圖仍保持布吉範圍。</p>
+      <p class="spot-map-hint">機場、兩間酒店、拉威海角、那卡市集與 Simon Cabaret。右上角 ◎ 可開 GPS；人在香港時地圖仍保持布吉範圍。</p>
     </div>
     <div class="area-grid">${areas}</div>
     <h3 class="section-title">按日瀏覽 <span class="badge">${days.length} 天</span></h3>
